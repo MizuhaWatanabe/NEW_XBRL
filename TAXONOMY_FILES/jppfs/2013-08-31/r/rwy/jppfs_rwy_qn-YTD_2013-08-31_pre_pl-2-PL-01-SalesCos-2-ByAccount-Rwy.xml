@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedQuarterly/role/totalLabel" xlink:type="simple" xlink:href="../../jppfs_rt_2013-08-31.xsd#rol_NonConsolidatedQuarterlyTotalLabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_YearToQuarterEndStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2013-08-31.xsd#rol_std_YearToQuarterEndStatementOfIncome"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_YearToQuarterEndStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingIncomeRailwayAbstractRWY" xlink:label="OperatingIncomeRailwayAbstractRWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingRevenueRailwayAbstractRWY" xlink:label="OperatingRevenueRailwayAbstractRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeRailwayAbstractRWY" xlink:to="OperatingRevenueRailwayAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_PassengerTransportationORRWY" xlink:label="PassengerTransportationORRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="PassengerTransportationORRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FreightTransportationORRWY" xlink:label="FreightTransportationORRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="FreightTransportationORRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_TrackageRevenueORRWY" xlink:label="TrackageRevenueORRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="TrackageRevenueORRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_TransferOfRailroadLineORRWY" xlink:label="TransferOfRailroadLineORRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="TransferOfRailroadLineORRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_MiscellaneousIncomeOfTransportationORRWY" xlink:label="MiscellaneousIncomeOfTransportationORRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="MiscellaneousIncomeOfTransportationORRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingRevenueRailwayRWY" xlink:label="OperatingRevenueRailwayRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="OperatingRevenueRailwayRWY" order="6.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedQuarterly/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesRailwayAbstractRWY" xlink:label="OperatingExpensesRailwayAbstractRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeRailwayAbstractRWY" xlink:to="OperatingExpensesRailwayAbstractRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_TransportationExpensesOERWY" xlink:label="TransportationExpensesOERWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="TransportationExpensesOERWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_AdvertisingExpensesOERWY" xlink:label="AdvertisingExpensesOERWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="AdvertisingExpensesOERWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_WelfareFacilitiesExpensesOERWY" xlink:label="WelfareFacilitiesExpensesOERWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="WelfareFacilitiesExpensesOERWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_GeneralAndAdministrativeExpensesOERWY" xlink:label="GeneralAndAdministrativeExpensesOERWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="GeneralAndAdministrativeExpensesOERWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_TaxesOERWY" xlink:label="TaxesOERWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="TaxesOERWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_DepreciationOERWY" xlink:label="DepreciationOERWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="DepreciationOERWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesRailwayRWY" xlink:label="OperatingExpensesRailwayRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="OperatingExpensesRailwayRWY" order="7.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedQuarterly/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingIncomeRelatedAbstractRWY" xlink:label="OperatingIncomeRelatedAbstractRWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingRevenueRelatedAbstractRWY" xlink:label="OperatingRevenueRelatedAbstractRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeRelatedAbstractRWY" xlink:to="OperatingRevenueRelatedAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingRevenueRelatedRWY" xlink:label="OperatingRevenueRelatedRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueRelatedAbstractRWY" xlink:to="OperatingRevenueRelatedRWY" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedQuarterly/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesRelatedAbstractRWY" xlink:label="OperatingExpensesRelatedAbstractRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeRelatedAbstractRWY" xlink:to="OperatingExpensesRelatedAbstractRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesRelatedRWY" xlink:label="OperatingExpensesRelatedRWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesRelatedAbstractRWY" xlink:to="OperatingExpensesRelatedRWY" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedQuarterly/role/totalLabel"/>
+  </link:presentationLink>
+</link:linkbase>

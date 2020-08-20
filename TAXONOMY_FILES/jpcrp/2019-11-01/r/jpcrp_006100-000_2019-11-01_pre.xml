@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_OtherElementsForAccountingPolicies" xlink:type="simple" xlink:href="../jpcrp_rt_2019-11-01.xsd#rol_std_OtherElementsForAccountingPolicies"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_OtherElementsForAccountingPolicies">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_OtherElementsForAccountingPoliciesAbstract" xlink:label="OtherElementsForAccountingPoliciesAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForTradingAccountSecuritiesTextBlock" xlink:label="AccountingPolicyForTradingAccountSecuritiesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherElementsForAccountingPoliciesAbstract" xlink:to="AccountingPolicyForTradingAccountSecuritiesTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForAssetsAndLiabilitiesInTradingAccountsTextBlock" xlink:label="AccountingPolicyForAssetsAndLiabilitiesInTradingAccountsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherElementsForAccountingPoliciesAbstract" xlink:to="AccountingPolicyForAssetsAndLiabilitiesInTradingAccountsTextBlock" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForMoneyTrustTextBlock" xlink:label="AccountingPolicyForMoneyTrustTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherElementsForAccountingPoliciesAbstract" xlink:to="AccountingPolicyForMoneyTrustTextBlock" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForDerivativesTextBlock" xlink:label="AccountingPolicyForDerivativesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherElementsForAccountingPoliciesAbstract" xlink:to="AccountingPolicyForDerivativesTextBlock" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForDeferredAssetsUnderArticle113OfInsuranceBusinessActINSTextBlock" xlink:label="AccountingPolicyForDeferredAssetsUnderArticle113OfInsuranceBusinessActINSTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherElementsForAccountingPoliciesAbstract" xlink:to="AccountingPolicyForDeferredAssetsUnderArticle113OfInsuranceBusinessActINSTextBlock" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForConsumptionTaxesTextBlock" xlink:label="AccountingPolicyForConsumptionTaxesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherElementsForAccountingPoliciesAbstract" xlink:to="AccountingPolicyForConsumptionTaxesTextBlock" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForDeferredTaxTextBlock" xlink:label="AccountingPolicyForDeferredTaxTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherElementsForAccountingPoliciesAbstract" xlink:to="AccountingPolicyForDeferredTaxTextBlock" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_DescriptionOfFactThatAccountingPolicyForRetirementBenefitsIsDifferentFromConsolidatedFinancialStatementsTextBlock" xlink:label="DescriptionOfFactThatAccountingPolicyForRetirementBenefitsIsDifferentFromConsolidatedFinancialStatementsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherElementsForAccountingPoliciesAbstract" xlink:to="DescriptionOfFactThatAccountingPolicyForRetirementBenefitsIsDifferentFromConsolidatedFinancialStatementsTextBlock" order="8.0"/>
+  </link:presentationLink>
+</link:linkbase>

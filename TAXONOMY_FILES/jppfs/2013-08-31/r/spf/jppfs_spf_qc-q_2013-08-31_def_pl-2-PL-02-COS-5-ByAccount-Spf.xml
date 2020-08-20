@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_QuarterPeriodConsolidatedStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2013-08-31.xsd#rol_std_QuarterPeriodConsolidatedStatementOfIncome"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_QuarterPeriodConsolidatedStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesAbstractSPF" xlink:label="OperatingExpensesAbstractSPF"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FinancialExpensesAbstractSPF" xlink:label="FinancialExpensesAbstractSPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OperatingExpensesAbstractSPF" xlink:to="FinancialExpensesAbstractSPF" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_AmortizationOfBondIssuanceCostOESPF" xlink:label="AmortizationOfBondIssuanceCostOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesAbstractSPF" xlink:to="AmortizationOfBondIssuanceCostOESPF" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_InterestExpensesOESPF" xlink:label="InterestExpensesOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesAbstractSPF" xlink:to="InterestExpensesOESPF" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_InterestOnBondsOESPF" xlink:label="InterestOnBondsOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesAbstractSPF" xlink:to="InterestOnBondsOESPF" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_InterestOnCommercialPapersOESPF" xlink:label="InterestOnCommercialPapersOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesAbstractSPF" xlink:to="InterestOnCommercialPapersOESPF" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_GuaranteeCommissionOESPF" xlink:label="GuaranteeCommissionOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesAbstractSPF" xlink:to="GuaranteeCommissionOESPF" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherFinancialExpensesSPF" xlink:label="OtherFinancialExpensesSPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesAbstractSPF" xlink:to="OtherFinancialExpensesSPF" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FinancialExpensesSPF" xlink:label="FinancialExpensesSPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesAbstractSPF" xlink:to="FinancialExpensesSPF" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherOperatingExpensesAbstractSPF" xlink:label="OtherOperatingExpensesAbstractSPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OperatingExpensesAbstractSPF" xlink:to="OtherOperatingExpensesAbstractSPF" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_AdvertisingExpensesSGASPF" xlink:label="AdvertisingExpensesSGASPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="AdvertisingExpensesSGASPF" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ProvisionOfAllowanceForDoubtfulAccountsSGA" xlink:label="ProvisionOfAllowanceForDoubtfulAccountsSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="ProvisionOfAllowanceForDoubtfulAccountsSGA" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ProvisionForLossOnInterestRepaymentOESPF" xlink:label="ProvisionForLossOnInterestRepaymentOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="ProvisionForLossOnInterestRepaymentOESPF" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_BadDebtsExpensesSGA" xlink:label="BadDebtsExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="BadDebtsExpensesSGA" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_EmployeesSalariesAndBonusesOESPF" xlink:label="EmployeesSalariesAndBonusesOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="EmployeesSalariesAndBonusesOESPF" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ProvisionForBonusesOESPF" xlink:label="ProvisionForBonusesOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="ProvisionForBonusesOESPF" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ProvisionForDirectorsRetirementBenefitsSGA" xlink:label="ProvisionForDirectorsRetirementBenefitsSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="ProvisionForDirectorsRetirementBenefitsSGA" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_WelfareExpensesOESPF" xlink:label="WelfareExpensesOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="WelfareExpensesOESPF" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_RentExpensesOESPF" xlink:label="RentExpensesOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="RentExpensesOESPF" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_DepreciationOESPF" xlink:label="DepreciationOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="DepreciationOESPF" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_CommissionFeeOESPF" xlink:label="CommissionFeeOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="CommissionFeeOESPF" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_CommunicationExpensesOESPF" xlink:label="CommunicationExpensesOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="CommunicationExpensesOESPF" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherOESPF" xlink:label="OtherOESPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="OtherOESPF" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherOperatingExpensesSPF" xlink:label="OtherOperatingExpensesSPF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherOperatingExpensesAbstractSPF" xlink:to="OtherOperatingExpensesSPF" order="14.0"/>
+  </link:definitionLink>
+</link:linkbase>

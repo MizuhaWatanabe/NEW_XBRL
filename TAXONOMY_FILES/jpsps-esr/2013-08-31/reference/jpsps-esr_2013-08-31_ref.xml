@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2013-08-31.xsd#jpsps-esr_cor_PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock" xlink:label="PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-09-28</ref:IssueDate>
+      <ref:Article>第29条第2項第1号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock" xlink:to="reference_PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2013-08-31.xsd#jpsps-esr_cor_ChangesInMajorPartiesInvolvedTextBlock" xlink:label="ChangesInMajorPartiesInvolvedTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ChangesInMajorPartiesInvolvedTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-09-28</ref:IssueDate>
+      <ref:Article>第29条第2項第2号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ChangesInMajorPartiesInvolvedTextBlock" xlink:to="reference_ChangesInMajorPartiesInvolvedTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2013-08-31.xsd#jpsps-esr_cor_MajorChangesInInvestmentManagementPolicyEtcTextBlock" xlink:label="MajorChangesInInvestmentManagementPolicyEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_MajorChangesInInvestmentManagementPolicyEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-09-28</ref:IssueDate>
+      <ref:Article>第29条第2項第3号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="MajorChangesInInvestmentManagementPolicyEtcTextBlock" xlink:to="reference_MajorChangesInInvestmentManagementPolicyEtcTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2013-08-31.xsd#jpsps-esr_cor_EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock" xlink:label="EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-09-28</ref:IssueDate>
+      <ref:Article>第29条第2項第4号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock" xlink:to="reference_EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock"/>
+  </link:referenceLink>
+</link:linkbase>

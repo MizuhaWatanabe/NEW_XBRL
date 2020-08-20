@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ExplanationAboutCorporateGovernance-12" xlink:type="simple" xlink:href="../jpcrp_rt_2018-03-31.xsd#rol_std_ExplanationAboutCorporateGovernance-12"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ExplanationAboutCorporateGovernance-12">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_SequentialNumbersAxis" xlink:label="SequentialNumbersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row4Member" xlink:label="Row4Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row4Member" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row5Member" xlink:label="Row5Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row5Member" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row6Member" xlink:label="Row6Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row6Member" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row7Member" xlink:label="Row7Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row7Member" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row8Member" xlink:label="Row8Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row8Member" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row9Member" xlink:label="Row9Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row9Member" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row10Member" xlink:label="Row10Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row10Member" priority="0" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row1Member" xlink:label="Row1Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row1Member" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row2Member" xlink:label="Row2Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row2Member" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row3Member" xlink:label="Row3Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row3Member" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_ExplanationAboutCorporateGovernanceHeading" xlink:label="ExplanationAboutCorporateGovernanceHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_EquitySecuritiesHeldInformationAboutCorporateGovernanceAbstract" xlink:label="EquitySecuritiesHeldInformationAboutCorporateGovernanceAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="EquitySecuritiesHeldInformationAboutCorporateGovernanceAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract" xlink:label="GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EquitySecuritiesHeldInformationAboutCorporateGovernanceAbstract" xlink:to="GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyTable" xlink:label="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract" xlink:to="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyTable" priority="0" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyTable" xlink:to="SequentialNumbersAxis" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:label="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract" xlink:to="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_NameOfSecuritiesDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" xlink:label="NameOfSecuritiesDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:to="NameOfSecuritiesDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_NumberOfSharesHeldDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" xlink:label="NumberOfSharesHeldDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:to="NumberOfSharesHeldDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_BookValueDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" xlink:label="BookValueDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:to="BookValueDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_PurposesOfHoldingDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" xlink:label="PurposesOfHoldingDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:to="PurposesOfHoldingDetailsOfDeemedHoldingsOfEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" priority="0" order="4.0"/>
+  </link:definitionLink>
+</link:linkbase>

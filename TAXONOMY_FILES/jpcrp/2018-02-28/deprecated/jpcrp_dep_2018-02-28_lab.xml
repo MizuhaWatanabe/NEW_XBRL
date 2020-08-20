@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/deprecatedDateLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd#deprecatedDateLabel"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/deprecatedLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd#deprecatedLabel"/>
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="jpcrp_dep_2018-02-28.xsd#jpcrp_cor_FinancialStatementsOfMergedCompanyHeading" xlink:label="FinancialStatementsOfMergedCompanyHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_FinancialStatementsOfMergedCompanyHeading" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="ja" id="label_FinancialStatementsOfMergedCompanyHeading">企業内容等の開示に関する内閣府令の一部を改正する内閣府令</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FinancialStatementsOfMergedCompanyHeading" xlink:to="label_FinancialStatementsOfMergedCompanyHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_FinancialStatementsOfMergedCompanyHeading_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="ja" id="label_FinancialStatementsOfMergedCompanyHeading_2">2014-03-26</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FinancialStatementsOfMergedCompanyHeading" xlink:to="label_FinancialStatementsOfMergedCompanyHeading_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp_dep_2018-02-28.xsd#jpcrp_cor_FinancialStatementsOfMergedCompanyTextBlock" xlink:label="FinancialStatementsOfMergedCompanyTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_FinancialStatementsOfMergedCompanyTextBlock" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="ja" id="label_FinancialStatementsOfMergedCompanyTextBlock">企業内容等の開示に関する内閣府令の一部を改正する内閣府令</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FinancialStatementsOfMergedCompanyTextBlock" xlink:to="label_FinancialStatementsOfMergedCompanyTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_FinancialStatementsOfMergedCompanyTextBlock_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="ja" id="label_FinancialStatementsOfMergedCompanyTextBlock_2">2014-03-26</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FinancialStatementsOfMergedCompanyTextBlock" xlink:to="label_FinancialStatementsOfMergedCompanyTextBlock_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp_dep_2018-02-28.xsd#jpcrp_cor_IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock" xlink:label="IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="ja" id="label_IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock">企業内容等の開示に関する内閣府令の一部を改正する内閣府令</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock" xlink:to="label_IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="ja" id="label_IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock_2">2014-03-26</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock" xlink:to="label_IndependentAuditorsReportNonConsolidatedMergedCompanyTextBlock_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp_dep_2018-02-28.xsd#jpcrp_cor_NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation" xlink:label="NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation"/>
+    <link:label xlink:type="resource" xlink:label="label_NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="ja" id="label_NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation">企業内容等の開示に関する内閣府令の一部を改正する内閣府令</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation" xlink:to="label_NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation"/>
+    <link:label xlink:type="resource" xlink:label="label_NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="ja" id="label_NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation_2">2014-03-26</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation" xlink:to="label_NoteOnFinancialStatementsOfMergedCompanyAndIndependentAuditFinancialInformation_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp_dep_2018-02-28.xsd#jpcrp_cor_IssuesToAddressHeading" xlink:label="IssuesToAddressHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_IssuesToAddressHeading" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="ja" id="label_IssuesToAddressHeading">企業内容等の開示に関する内閣府令の一部を改正する内閣府令</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IssuesToAddressHeading" xlink:to="label_IssuesToAddressHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_IssuesToAddressHeading_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="ja" id="label_IssuesToAddressHeading_2">2017-02-14</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IssuesToAddressHeading" xlink:to="label_IssuesToAddressHeading_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp_dep_2018-02-28.xsd#jpcrp_cor_IssuesToAddressTextBlock" xlink:label="IssuesToAddressTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_IssuesToAddressTextBlock" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="ja" id="label_IssuesToAddressTextBlock">企業内容等の開示に関する内閣府令の一部を改正する内閣府令</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IssuesToAddressTextBlock" xlink:to="label_IssuesToAddressTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_IssuesToAddressTextBlock_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="ja" id="label_IssuesToAddressTextBlock_2">2017-02-14</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IssuesToAddressTextBlock" xlink:to="label_IssuesToAddressTextBlock_2"/>
+  </link:labelLink>
+</link:linkbase>

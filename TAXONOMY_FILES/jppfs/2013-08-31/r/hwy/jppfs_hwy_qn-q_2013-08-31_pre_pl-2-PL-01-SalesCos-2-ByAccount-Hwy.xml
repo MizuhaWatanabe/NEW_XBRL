@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_QuarterPeriodStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2013-08-31.xsd#rol_std_QuarterPeriodStatementOfIncome"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_QuarterPeriodStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingIncomeAndLossFromHighwayBusinessAbstractHWY" xlink:label="OperatingIncomeAndLossFromHighwayBusinessAbstractHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingRevenueHighwayBusinessAbstractHWY" xlink:label="OperatingRevenueHighwayBusinessAbstractHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeAndLossFromHighwayBusinessAbstractHWY" xlink:to="OperatingRevenueHighwayBusinessAbstractHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FareReceiptsOperatingRevenueHighwayBusinessHWY" xlink:label="FareReceiptsOperatingRevenueHighwayBusinessHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueHighwayBusinessAbstractHWY" xlink:to="FareReceiptsOperatingRevenueHighwayBusinessHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_SalesOfCompletedHighwayConstructionContractsOperatingRevenueHighwayBusinessHWY" xlink:label="SalesOfCompletedHighwayConstructionContractsOperatingRevenueHighwayBusinessHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueHighwayBusinessAbstractHWY" xlink:to="SalesOfCompletedHighwayConstructionContractsOperatingRevenueHighwayBusinessHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherSalesOperatingRevenueHighwayBusinessHWY" xlink:label="OtherSalesOperatingRevenueHighwayBusinessHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueHighwayBusinessAbstractHWY" xlink:to="OtherSalesOperatingRevenueHighwayBusinessHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingRevenueHighwayBusinessHWY" xlink:label="OperatingRevenueHighwayBusinessHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingRevenueHighwayBusinessAbstractHWY" xlink:to="OperatingRevenueHighwayBusinessHWY" order="4.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesHighwayBusinessAbstractHWY" xlink:label="OperatingExpensesHighwayBusinessAbstractHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeAndLossFromHighwayBusinessAbstractHWY" xlink:to="OperatingExpensesHighwayBusinessAbstractHWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_RentExpensesOnHighwayAssetsOperatingExpensesHighwayBusinessHWY" xlink:label="RentExpensesOnHighwayAssetsOperatingExpensesHighwayBusinessHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesHighwayBusinessAbstractHWY" xlink:to="RentExpensesOnHighwayAssetsOperatingExpensesHighwayBusinessHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_CostOfSalesOfCompletedHighwayConstructionContractsOperatingExpenseHighwayBusinessHWY" xlink:label="CostOfSalesOfCompletedHighwayConstructionContractsOperatingExpenseHighwayBusinessHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesHighwayBusinessAbstractHWY" xlink:to="CostOfSalesOfCompletedHighwayConstructionContractsOperatingExpenseHighwayBusinessHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_AdministrativeExpensesOperatingExpensesHighwayBusinessHWY" xlink:label="AdministrativeExpensesOperatingExpensesHighwayBusinessHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesHighwayBusinessAbstractHWY" xlink:to="AdministrativeExpensesOperatingExpensesHighwayBusinessHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesHighwayBusinessHWY" xlink:label="OperatingExpensesHighwayBusinessHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesHighwayBusinessAbstractHWY" xlink:to="OperatingExpensesHighwayBusinessHWY" order="4.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+  </link:presentationLink>
+</link:linkbase>

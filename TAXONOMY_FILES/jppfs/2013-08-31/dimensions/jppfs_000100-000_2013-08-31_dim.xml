@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_RetrospectiveApplicationAndRetrospectiveRestatement" xlink:type="simple" xlink:href="../jppfs_rt_2013-08-31.xsd#rol_std_RetrospectiveApplicationAndRetrospectiveRestatement"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_RetrospectiveApplicationAndRetrospectiveRestatement">
+    <link:loc xlink:type="locator" xlink:href="../jppfs_cor_2013-08-31.xsd#jppfs_cor_RetrospectiveApplicationAndRetrospectiveRestatementAxis" xlink:label="RetrospectiveApplicationAndRetrospectiveRestatementAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_cor_2013-08-31.xsd#jppfs_cor_CurrentlyStatedMember" xlink:label="CurrentlyStatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="RetrospectiveApplicationAndRetrospectiveRestatementAxis" xlink:to="CurrentlyStatedMember" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_cor_2013-08-31.xsd#jppfs_cor_CurrentlyStatedMember" xlink:label="CurrentlyStatedMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="RetrospectiveApplicationAndRetrospectiveRestatementAxis" xlink:to="CurrentlyStatedMember_2" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_cor_2013-08-31.xsd#jppfs_cor_PreviouslyStatedMember" xlink:label="PreviouslyStatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CurrentlyStatedMember" xlink:to="PreviouslyStatedMember" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_cor_2013-08-31.xsd#jppfs_cor_CumulativeEffectsOfChangesInAccountingPoliciesMember" xlink:label="CumulativeEffectsOfChangesInAccountingPoliciesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CurrentlyStatedMember" xlink:to="CumulativeEffectsOfChangesInAccountingPoliciesMember" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_cor_2013-08-31.xsd#jppfs_cor_CumulativeEffectsOfRetrospectiveRestatementMember" xlink:label="CumulativeEffectsOfRetrospectiveRestatementMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CurrentlyStatedMember" xlink:to="CumulativeEffectsOfRetrospectiveRestatementMember" priority="0" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>
