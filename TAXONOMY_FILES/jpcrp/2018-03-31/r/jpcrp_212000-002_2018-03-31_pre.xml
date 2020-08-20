@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_InformationAboutEmployees-02" xlink:type="simple" xlink:href="../jpcrp_rt_2018-03-31.xsd#rol_std_InformationAboutEmployees-02"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_InformationAboutEmployees-02">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_InformationAboutEmployeesHeading" xlink:label="InformationAboutEmployeesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_InformationAboutReportingCompanyInformationAboutEmployeesAbstract" xlink:label="InformationAboutReportingCompanyInformationAboutEmployeesAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutEmployeesHeading" xlink:to="InformationAboutReportingCompanyInformationAboutEmployeesAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_NumberOfEmployees" xlink:label="NumberOfEmployees"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutReportingCompanyInformationAboutEmployeesAbstract" xlink:to="NumberOfEmployees" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_AverageNumberOfTemporaryWorkers" xlink:label="AverageNumberOfTemporaryWorkers"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutReportingCompanyInformationAboutEmployeesAbstract" xlink:to="AverageNumberOfTemporaryWorkers" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_AverageAgeYearsInformationAboutReportingCompanyInformationAboutEmployees" xlink:label="AverageAgeYearsInformationAboutReportingCompanyInformationAboutEmployees"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutReportingCompanyInformationAboutEmployeesAbstract" xlink:to="AverageAgeYearsInformationAboutReportingCompanyInformationAboutEmployees" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_AverageAgeMonthsInformationAboutReportingCompanyInformationAboutEmployees" xlink:label="AverageAgeMonthsInformationAboutReportingCompanyInformationAboutEmployees"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutReportingCompanyInformationAboutEmployeesAbstract" xlink:to="AverageAgeMonthsInformationAboutReportingCompanyInformationAboutEmployees" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_AverageLengthOfServiceYearsInformationAboutReportingCompanyInformationAboutEmployees" xlink:label="AverageLengthOfServiceYearsInformationAboutReportingCompanyInformationAboutEmployees"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutReportingCompanyInformationAboutEmployeesAbstract" xlink:to="AverageLengthOfServiceYearsInformationAboutReportingCompanyInformationAboutEmployees" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_AverageLengthOfServiceMonthsInformationAboutReportingCompanyInformationAboutEmployees" xlink:label="AverageLengthOfServiceMonthsInformationAboutReportingCompanyInformationAboutEmployees"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutReportingCompanyInformationAboutEmployeesAbstract" xlink:to="AverageLengthOfServiceMonthsInformationAboutReportingCompanyInformationAboutEmployees" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_AverageAnnualSalaryInformationAboutReportingCompanyInformationAboutEmployees" xlink:label="AverageAnnualSalaryInformationAboutReportingCompanyInformationAboutEmployees"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutReportingCompanyInformationAboutEmployeesAbstract" xlink:to="AverageAnnualSalaryInformationAboutReportingCompanyInformationAboutEmployees" priority="0" order="7.0"/>
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_rwy_BalanceSheet-ListOfAccounts" xlink:type="simple" xlink:href="../../jppfs_rt_2018-03-31.xsd#rol_rwy_BalanceSheet-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_rwy_BalanceSheet-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LiabilitiesAbstract" xlink:label="LiabilitiesAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ReservesUnderTheSpecialLawsAbstract1" xlink:label="ReservesUnderTheSpecialLawsAbstract1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesAbstract" xlink:to="ReservesUnderTheSpecialLawsAbstract1" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_SpecialReserveForExpansionOfRailwayTransportCapacityRWY" xlink:label="SpecialReserveForExpansionOfRailwayTransportCapacityRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ReservesUnderTheSpecialLawsAbstract1" xlink:to="SpecialReserveForExpansionOfRailwayTransportCapacityRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ReservesUnderTheSpecialLaws1" xlink:label="ReservesUnderTheSpecialLaws1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ReservesUnderTheSpecialLawsAbstract1" xlink:to="ReservesUnderTheSpecialLaws1" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CurrentLiabilitiesAbstract" xlink:label="CurrentLiabilitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesAbstract" xlink:to="CurrentLiabilitiesAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_InterLineFaresReceivedCLRWY" xlink:label="InterLineFaresReceivedCLRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="InterLineFaresReceivedCLRWY" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PrepaidFaresReceivedCLRWY" xlink:label="PrepaidFaresReceivedCLRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="PrepaidFaresReceivedCLRWY" priority="0" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccountsPayableRailwayEquipmentCLRWY" xlink:label="AccountsPayableRailwayEquipmentCLRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="AccountsPayableRailwayEquipmentCLRWY" priority="0" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CurrentPortionOfLongTermAccountsPayableRailwayEquipmentCLRWY" xlink:label="CurrentPortionOfLongTermAccountsPayableRailwayEquipmentCLRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="CurrentPortionOfLongTermAccountsPayableRailwayEquipmentCLRWY" priority="0" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CurrentPortionOfBonds" xlink:label="CurrentPortionOfBonds"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="CurrentPortionOfBonds" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NotesPayableTrade" xlink:label="NotesPayableTrade"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="NotesPayableTrade" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ShortTermLoansPayable" xlink:label="ShortTermLoansPayable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="ShortTermLoansPayable" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccountsPayableOther" xlink:label="AccountsPayableOther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="AccountsPayableOther" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccruedExpenses" xlink:label="AccruedExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="AccruedExpenses" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IncomeTaxesPayable" xlink:label="IncomeTaxesPayable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="IncomeTaxesPayable" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DeferredTaxLiabilitiesCL" xlink:label="DeferredTaxLiabilitiesCL"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="DeferredTaxLiabilitiesCL" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AdvancesReceived" xlink:label="AdvancesReceived"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="AdvancesReceived" priority="0" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DepositsReceived" xlink:label="DepositsReceived"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="DepositsReceived" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_UnearnedRevenue" xlink:label="UnearnedRevenue"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="UnearnedRevenue" priority="0" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_OtherCL" xlink:label="OtherCL"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="OtherCL" priority="0" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CurrentLiabilities" xlink:label="CurrentLiabilities"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentLiabilitiesAbstract" xlink:to="CurrentLiabilities" priority="0" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentLiabilitiesAbstract" xlink:label="NoncurrentLiabilitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesAbstract" xlink:to="NoncurrentLiabilitiesAbstract" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ProvisionForLargeScaleRenovationOfTheShinkansenInfrastructureNCLRWY" xlink:label="ProvisionForLargeScaleRenovationOfTheShinkansenInfrastructureNCLRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="ProvisionForLargeScaleRenovationOfTheShinkansenInfrastructureNCLRWY" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LongTermAccountsPayableRailwayEquipmentNCLRWY" xlink:label="LongTermAccountsPayableRailwayEquipmentNCLRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="LongTermAccountsPayableRailwayEquipmentNCLRWY" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LongTermAccountsPayableToJapanRailwayConstructionTransportAndTechnologyAgencyNCLRWY" xlink:label="LongTermAccountsPayableToJapanRailwayConstructionTransportAndTechnologyAgencyNCLRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="LongTermAccountsPayableToJapanRailwayConstructionTransportAndTechnologyAgencyNCLRWY" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_BondsPayable" xlink:label="BondsPayable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="BondsPayable" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LongTermLoansPayable" xlink:label="LongTermLoansPayable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="LongTermLoansPayable" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DeferredTaxLiabilitiesNCL" xlink:label="DeferredTaxLiabilitiesNCL"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="DeferredTaxLiabilitiesNCL" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NegativeGoodwill" xlink:label="NegativeGoodwill"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="NegativeGoodwill" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_OtherNCL" xlink:label="OtherNCL"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="OtherNCL" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentLiabilities" xlink:label="NoncurrentLiabilities"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentLiabilitiesAbstract" xlink:to="NoncurrentLiabilities" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_Liabilities" xlink:label="Liabilities"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesAbstract" xlink:to="Liabilities" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NetAssetsAbstract" xlink:label="NetAssetsAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ShareholdersEquityAbstract" xlink:label="ShareholdersEquityAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsAbstract" xlink:to="ShareholdersEquityAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DepositForSubscriptionsToTreasuryStock" xlink:label="DepositForSubscriptionsToTreasuryStock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityAbstract" xlink:to="DepositForSubscriptionsToTreasuryStock" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CapitalStock" xlink:label="CapitalStock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityAbstract" xlink:to="CapitalStock" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DepositForSubscriptionsToShares" xlink:label="DepositForSubscriptionsToShares"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityAbstract" xlink:to="DepositForSubscriptionsToShares" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CapitalSurplusAbstract" xlink:label="CapitalSurplusAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityAbstract" xlink:to="CapitalSurplusAbstract" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LegalCapitalSurplus" xlink:label="LegalCapitalSurplus"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CapitalSurplusAbstract" xlink:to="LegalCapitalSurplus" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_OtherCapitalSurplus" xlink:label="OtherCapitalSurplus"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CapitalSurplusAbstract" xlink:to="OtherCapitalSurplus" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CapitalSurplus" xlink:label="CapitalSurplus"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CapitalSurplusAbstract" xlink:to="CapitalSurplus" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RetainedEarningsAbstract" xlink:label="RetainedEarningsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityAbstract" xlink:to="RetainedEarningsAbstract" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LegalRetainedEarnings" xlink:label="LegalRetainedEarnings"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="RetainedEarningsAbstract" xlink:to="LegalRetainedEarnings" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_OtherRetainedEarningsAbstract" xlink:label="OtherRetainedEarningsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="RetainedEarningsAbstract" xlink:to="OtherRetainedEarningsAbstract" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RetainedEarningsBroughtForward" xlink:label="RetainedEarningsBroughtForward"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherRetainedEarningsAbstract" xlink:to="RetainedEarningsBroughtForward" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RetainedEarnings" xlink:label="RetainedEarnings"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="RetainedEarningsAbstract" xlink:to="RetainedEarnings" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_TreasuryStock" xlink:label="TreasuryStock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityAbstract" xlink:to="TreasuryStock" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ShareholdersEquity" xlink:label="ShareholdersEquity"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityAbstract" xlink:to="ShareholdersEquity" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ValuationAndTranslationAdjustmentsAbstract" xlink:label="ValuationAndTranslationAdjustmentsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsAbstract" xlink:to="ValuationAndTranslationAdjustmentsAbstract" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ValuationDifferenceOnAvailableForSaleSecurities" xlink:label="ValuationDifferenceOnAvailableForSaleSecurities"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ValuationAndTranslationAdjustmentsAbstract" xlink:to="ValuationDifferenceOnAvailableForSaleSecurities" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DeferredGainsOrLossesOnHedges" xlink:label="DeferredGainsOrLossesOnHedges"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ValuationAndTranslationAdjustmentsAbstract" xlink:to="DeferredGainsOrLossesOnHedges" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RevaluationReserveForLand" xlink:label="RevaluationReserveForLand"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ValuationAndTranslationAdjustmentsAbstract" xlink:to="RevaluationReserveForLand" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ValuationAndTranslationAdjustments" xlink:label="ValuationAndTranslationAdjustments"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ValuationAndTranslationAdjustmentsAbstract" xlink:to="ValuationAndTranslationAdjustments" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_SubscriptionRightsToShares" xlink:label="SubscriptionRightsToShares"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsAbstract" xlink:to="SubscriptionRightsToShares" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NonControllingInterests" xlink:label="NonControllingInterests"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsAbstract" xlink:to="NonControllingInterests" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NetAssets" xlink:label="NetAssets"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsAbstract" xlink:to="NetAssets" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_BalanceSheetLineItems" xlink:label="BalanceSheetLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AssetsAbstract" xlink:label="AssetsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BalanceSheetLineItems" xlink:to="AssetsAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_Inventories" xlink:label="Inventories"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_MerchandiseAndFinishedGoods" xlink:label="MerchandiseAndFinishedGoods"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="Inventories" xlink:to="MerchandiseAndFinishedGoods" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_WorkInProcess" xlink:label="WorkInProcess"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="Inventories" xlink:to="WorkInProcess" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RawMaterialsAndSupplies" xlink:label="RawMaterialsAndSupplies"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="Inventories" xlink:to="RawMaterialsAndSupplies" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_Supplies" xlink:label="Supplies"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="Inventories" xlink:to="Supplies" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CurrentAssetsAbstract" xlink:label="CurrentAssetsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsAbstract" xlink:to="CurrentAssetsAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RailwayFaresReceivablesCARWY" xlink:label="RailwayFaresReceivablesCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="RailwayFaresReceivablesCARWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccountsReceivableCARWY" xlink:label="AccountsReceivableCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="AccountsReceivableCARWY" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AdvancePaymentsCARWY" xlink:label="AdvancePaymentsCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="AdvancePaymentsCARWY" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_SpecialReserveForExpansionOfRailwayTransportCapacityCARWY" xlink:label="SpecialReserveForExpansionOfRailwayTransportCapacityCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="SpecialReserveForExpansionOfRailwayTransportCapacityCARWY" priority="0" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LandAndBuildingsForSaleCARWY" xlink:label="LandAndBuildingsForSaleCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="LandAndBuildingsForSaleCARWY" priority="0" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NotesAccountsReceivableTradeAndAccruedFreightRWY" xlink:label="NotesAccountsReceivableTradeAndAccruedFreightRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="NotesAccountsReceivableTradeAndAccruedFreightRWY" priority="0" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PrepaidExpenses" xlink:label="PrepaidExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="PrepaidExpenses" priority="0" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccruedIncome" xlink:label="AccruedIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="AccruedIncome" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AllowanceForDoubtfulAccountsCA" xlink:label="AllowanceForDoubtfulAccountsCA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="AllowanceForDoubtfulAccountsCA" priority="0" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CashAndDeposits" xlink:label="CashAndDeposits"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="CashAndDeposits" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NotesReceivableTrade" xlink:label="NotesReceivableTrade"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="NotesReceivableTrade" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ShortTermLoansReceivable" xlink:label="ShortTermLoansReceivable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="ShortTermLoansReceivable" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ShortTermInvestmentSecurities" xlink:label="ShortTermInvestmentSecurities"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="ShortTermInvestmentSecurities" priority="0" order="7.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="Inventories" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DeferredTaxAssetsCA" xlink:label="DeferredTaxAssetsCA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="DeferredTaxAssetsCA" priority="0" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_OtherCA" xlink:label="OtherCA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="OtherCA" priority="0" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_CurrentAssets" xlink:label="CurrentAssets"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CurrentAssetsAbstract" xlink:to="CurrentAssets" priority="0" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsAbstract" xlink:label="NoncurrentAssetsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsAbstract" xlink:to="NoncurrentAssetsAbstract" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsRailwayBusinessAbstractRWY" xlink:label="NoncurrentAssetsRailwayBusinessAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsRailwayBusinessAbstractRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNCARailway" xlink:label="PropertyPlantAndEquipmentNCARailway"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRailwayBusinessAbstractRWY" xlink:to="PropertyPlantAndEquipmentNCARailway" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationPPERailway" xlink:label="AccumulatedDepreciationPPERailway"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARailway" xlink:to="AccumulatedDepreciationPPERailway" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetNCARailway" xlink:label="PropertyPlantAndEquipmentNetNCARailway"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARailway" xlink:to="PropertyPlantAndEquipmentNetNCARailway" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_BuildingsRWY" xlink:label="BuildingsRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARailway" xlink:to="BuildingsRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_MachineryAndEquipmentRWY" xlink:label="MachineryAndEquipmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARailway" xlink:to="MachineryAndEquipmentRWY" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_StructuresRWY" xlink:label="StructuresRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARailway" xlink:to="StructuresRWY" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ToolsFurnitureAndFixturesRWY" xlink:label="ToolsFurnitureAndFixturesRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARailway" xlink:to="ToolsFurnitureAndFixturesRWY" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RollingStockRWY" xlink:label="RollingStockRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARailway" xlink:to="RollingStockRWY" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LandRWY" xlink:label="LandRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARailway" xlink:to="LandRWY" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsNCARWY" xlink:label="IntangibleAssetsNCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRailwayBusinessAbstractRWY" xlink:to="IntangibleAssetsNCARWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_SoftwareRWY" xlink:label="SoftwareRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IntangibleAssetsNCARWY" xlink:to="SoftwareRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RightOfUsingFacilitiesRWY" xlink:label="RightOfUsingFacilitiesRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IntangibleAssetsNCARWY" xlink:to="RightOfUsingFacilitiesRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LeaseholdRightRWY" xlink:label="LeaseholdRightRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IntangibleAssetsNCARWY" xlink:to="LeaseholdRightRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_TelephoneSubscriptionRightRWY" xlink:label="TelephoneSubscriptionRightRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IntangibleAssetsNCARWY" xlink:to="TelephoneSubscriptionRightRWY" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RightOfUsingFacilitiesOfMutualDirectCommunicationRWY" xlink:label="RightOfUsingFacilitiesOfMutualDirectCommunicationRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IntangibleAssetsNCARWY" xlink:to="RightOfUsingFacilitiesOfMutualDirectCommunicationRWY" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_RightOfUsingRailwayCommunicationFacilitiesInProgressRWY" xlink:label="RightOfUsingRailwayCommunicationFacilitiesInProgressRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IntangibleAssetsNCARWY" xlink:to="RightOfUsingRailwayCommunicationFacilitiesInProgressRWY" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsRailwayRWY" xlink:label="NoncurrentAssetsRailwayRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRailwayBusinessAbstractRWY" xlink:to="NoncurrentAssetsRailwayRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsRelatedAbstractRWY" xlink:label="NoncurrentAssetsRelatedAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsRelatedAbstractRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNCARelatedRWY" xlink:label="PropertyPlantAndEquipmentNCARelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRelatedAbstractRWY" xlink:to="PropertyPlantAndEquipmentNCARelatedRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationPPERelatedRWY" xlink:label="AccumulatedDepreciationPPERelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARelatedRWY" xlink:to="AccumulatedDepreciationPPERelatedRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetNCARelatedRWY" xlink:label="PropertyPlantAndEquipmentNetNCARelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCARelatedRWY" xlink:to="PropertyPlantAndEquipmentNetNCARelatedRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsRelatedRWY" xlink:label="IntangibleAssetsRelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRelatedAbstractRWY" xlink:to="IntangibleAssetsRelatedRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsRelatedRWY" xlink:label="NoncurrentAssetsRelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRelatedAbstractRWY" xlink:to="NoncurrentAssetsRelatedRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsAffiliatedAbstractRWY" xlink:label="NoncurrentAssetsAffiliatedAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsAffiliatedAbstractRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNCAAffiliatedRWY" xlink:label="PropertyPlantAndEquipmentNCAAffiliatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAffiliatedAbstractRWY" xlink:to="PropertyPlantAndEquipmentNCAAffiliatedRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationNCAAffiliatedRWY" xlink:label="AccumulatedDepreciationNCAAffiliatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedRWY" xlink:to="AccumulatedDepreciationNCAAffiliatedRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetNCAAffiliatedRWY" xlink:label="PropertyPlantAndEquipmentNetNCAAffiliatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedRWY" xlink:to="PropertyPlantAndEquipmentNetNCAAffiliatedRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsAffiliatedRWY" xlink:label="IntangibleAssetsAffiliatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAffiliatedAbstractRWY" xlink:to="IntangibleAssetsAffiliatedRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsAffiliatedRWY" xlink:label="NoncurrentAssetsAffiliatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAffiliatedAbstractRWY" xlink:to="NoncurrentAssetsAffiliatedRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressAbstractRWY" xlink:label="ConstructionInProgressAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="ConstructionInProgressAbstractRWY" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressRailwayRWY" xlink:label="ConstructionInProgressRailwayRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressRailwayRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressRWY" xlink:label="ConstructionInProgressRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressOtherRWY" xlink:label="ConstructionInProgressOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressOtherRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressOtherBusinessRWY" xlink:label="ConstructionInProgressOtherBusinessRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressOtherBusinessRWY" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressRealEstateRWY" xlink:label="ConstructionInProgressRealEstateRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressRealEstateRWY" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressRelatedRWY" xlink:label="ConstructionInProgressRelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressRelatedRWY" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressAutomobileRWY" xlink:label="ConstructionInProgressAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressAutomobileRWY" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressRailroadRWY" xlink:label="ConstructionInProgressRailroadRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressRailroadRWY" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressIncidentalRWY" xlink:label="ConstructionInProgressIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressIncidentalRWY" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressDevelopmentRWY" xlink:label="ConstructionInProgressDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressDevelopmentRWY" priority="0" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressSideLineRWY" xlink:label="ConstructionInProgressSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressSideLineRWY" priority="0" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_ConstructionInProgressAffiliatedRWY" xlink:label="ConstructionInProgressAffiliatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ConstructionInProgressAbstractRWY" xlink:to="ConstructionInProgressAffiliatedRWY" priority="0" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsRailroadAbstractRWY" xlink:label="NoncurrentAssetsRailroadAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsRailroadAbstractRWY" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentRailroadRWY" xlink:label="PropertyPlantAndEquipmentRailroadRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRailroadAbstractRWY" xlink:to="PropertyPlantAndEquipmentRailroadRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationRailroadRWY" xlink:label="AccumulatedDepreciationRailroadRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentRailroadRWY" xlink:to="AccumulatedDepreciationRailroadRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetRailroadRWY" xlink:label="PropertyPlantAndEquipmentNetRailroadRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentRailroadRWY" xlink:to="PropertyPlantAndEquipmentNetRailroadRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsRailroadRWY" xlink:label="IntangibleAssetsRailroadRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRailroadAbstractRWY" xlink:to="IntangibleAssetsRailroadRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsRailroadRWY" xlink:label="NoncurrentAssetsRailroadRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRailroadAbstractRWY" xlink:to="NoncurrentAssetsRailroadRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsAutomobileAbstractRWY" xlink:label="NoncurrentAssetsAutomobileAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsAutomobileAbstractRWY" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentAutomobileRWY" xlink:label="PropertyPlantAndEquipmentAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAutomobileAbstractRWY" xlink:to="PropertyPlantAndEquipmentAutomobileRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_VehiclesAutomobileRWY" xlink:label="VehiclesAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentAutomobileRWY" xlink:to="VehiclesAutomobileRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationAutomobileRWY" xlink:label="AccumulatedDepreciationAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentAutomobileRWY" xlink:to="AccumulatedDepreciationAutomobileRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetAutomobileRWY" xlink:label="PropertyPlantAndEquipmentNetAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentAutomobileRWY" xlink:to="PropertyPlantAndEquipmentNetAutomobileRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsAutomobileRWY" xlink:label="IntangibleAssetsAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAutomobileAbstractRWY" xlink:to="IntangibleAssetsAutomobileRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsAutomobileRWY" xlink:label="NoncurrentAssetsAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAutomobileAbstractRWY" xlink:to="NoncurrentAssetsAutomobileRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsRealEstateAbstractRWY" xlink:label="NoncurrentAssetsRealEstateAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsRealEstateAbstractRWY" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentRealEstateRWY" xlink:label="PropertyPlantAndEquipmentRealEstateRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRealEstateAbstractRWY" xlink:to="PropertyPlantAndEquipmentRealEstateRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationRealEstateRWY" xlink:label="AccumulatedDepreciationRealEstateRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentRealEstateRWY" xlink:to="AccumulatedDepreciationRealEstateRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetRealEstateRWY" xlink:label="PropertyPlantAndEquipmentNetRealEstateRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentRealEstateRWY" xlink:to="PropertyPlantAndEquipmentNetRealEstateRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsRealEstateRWY" xlink:label="IntangibleAssetsRealEstateRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRealEstateAbstractRWY" xlink:to="IntangibleAssetsRealEstateRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsRealEstateHotelRWY" xlink:label="NoncurrentAssetsRealEstateHotelRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsRealEstateAbstractRWY" xlink:to="NoncurrentAssetsRealEstateHotelRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsDevelopmentAbstractRWY" xlink:label="NoncurrentAssetsDevelopmentAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsDevelopmentAbstractRWY" priority="0" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentDevelopmentRWY" xlink:label="PropertyPlantAndEquipmentDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsDevelopmentAbstractRWY" xlink:to="PropertyPlantAndEquipmentDevelopmentRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationDevelopmentRWY" xlink:label="AccumulatedDepreciationDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentDevelopmentRWY" xlink:to="AccumulatedDepreciationDevelopmentRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetDevelopmentRWY" xlink:label="PropertyPlantAndEquipmentNetDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentDevelopmentRWY" xlink:to="PropertyPlantAndEquipmentNetDevelopmentRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsDevelopmentRWY" xlink:label="IntangibleAssetsDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsDevelopmentAbstractRWY" xlink:to="IntangibleAssetsDevelopmentRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsDevelopmentDevelopmentRWY" xlink:label="NoncurrentAssetsDevelopmentDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsDevelopmentAbstractRWY" xlink:to="NoncurrentAssetsDevelopmentDevelopmentRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsIncidentalAbstractRWY" xlink:label="NoncurrentAssetsIncidentalAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsIncidentalAbstractRWY" priority="0" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentIncidentalRWY" xlink:label="PropertyPlantAndEquipmentIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsIncidentalAbstractRWY" xlink:to="PropertyPlantAndEquipmentIncidentalRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationIncidentalRWY" xlink:label="AccumulatedDepreciationIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentIncidentalRWY" xlink:to="AccumulatedDepreciationIncidentalRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetIncidentalRWY" xlink:label="PropertyPlantAndEquipmentNetIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentIncidentalRWY" xlink:to="PropertyPlantAndEquipmentNetIncidentalRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsIncidentalRWY" xlink:label="IntangibleAssetsIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsIncidentalAbstractRWY" xlink:to="IntangibleAssetsIncidentalRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsIncidentalBusinessIncidentalRWY" xlink:label="NoncurrentAssetsIncidentalBusinessIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsIncidentalAbstractRWY" xlink:to="NoncurrentAssetsIncidentalBusinessIncidentalRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsSideLineAbstractRWY" xlink:label="NoncurrentAssetsSideLineAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsSideLineAbstractRWY" priority="0" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentSideLineRWY" xlink:label="PropertyPlantAndEquipmentSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsSideLineAbstractRWY" xlink:to="PropertyPlantAndEquipmentSideLineRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationSideLineRWY" xlink:label="AccumulatedDepreciationSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentSideLineRWY" xlink:to="AccumulatedDepreciationSideLineRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetSideLineRWY" xlink:label="PropertyPlantAndEquipmentNetSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentSideLineRWY" xlink:to="PropertyPlantAndEquipmentNetSideLineRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsSideLineRWY" xlink:label="IntangibleAssetsSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsSideLineAbstractRWY" xlink:to="IntangibleAssetsSideLineRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsSideLineSideLineRWY" xlink:label="NoncurrentAssetsSideLineSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsSideLineAbstractRWY" xlink:to="NoncurrentAssetsSideLineSideLineRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsOtherAbstractRWY" xlink:label="NoncurrentAssetsOtherAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssetsOtherAbstractRWY" priority="0" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentOtherRWY" xlink:label="PropertyPlantAndEquipmentOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsOtherAbstractRWY" xlink:to="PropertyPlantAndEquipmentOtherRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationOtherRWY" xlink:label="AccumulatedDepreciationOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentOtherRWY" xlink:to="AccumulatedDepreciationOtherRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetOtherRWY" xlink:label="PropertyPlantAndEquipmentNetOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentOtherRWY" xlink:to="PropertyPlantAndEquipmentNetOtherRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsOtherRWY" xlink:label="IntangibleAssetsOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsOtherAbstractRWY" xlink:to="IntangibleAssetsOtherRWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsOtherOtherRWY" xlink:label="NoncurrentAssetsOtherOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsOtherAbstractRWY" xlink:to="NoncurrentAssetsOtherOtherRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsAdvertisingOtherRWY" xlink:label="NoncurrentAssetsAdvertisingOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsOtherAbstractRWY" xlink:to="NoncurrentAssetsAdvertisingOtherRWY" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssetsAirCargoOtherRWY" xlink:label="NoncurrentAssetsAirCargoOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsOtherAbstractRWY" xlink:to="NoncurrentAssetsAirCargoOtherRWY" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_OtherNoncurrentAssetsAbstractRWY" xlink:label="OtherNoncurrentAssetsAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="OtherNoncurrentAssetsAbstractRWY" priority="0" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentOtherNCARWY" xlink:label="PropertyPlantAndEquipmentOtherNCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherNoncurrentAssetsAbstractRWY" xlink:to="PropertyPlantAndEquipmentOtherNCARWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AccumulatedDepreciationOtherNoncurrentAssetsRWY" xlink:label="AccumulatedDepreciationOtherNoncurrentAssetsRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentOtherNCARWY" xlink:to="AccumulatedDepreciationOtherNoncurrentAssetsRWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_PropertyPlantAndEquipmentNetOtherNCARWY" xlink:label="PropertyPlantAndEquipmentNetOtherNCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="PropertyPlantAndEquipmentOtherNCARWY" xlink:to="PropertyPlantAndEquipmentNetOtherNCARWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_IntangibleAssetsOtherNCARWY" xlink:label="IntangibleAssetsOtherNCARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherNoncurrentAssetsAbstractRWY" xlink:to="IntangibleAssetsOtherNCARWY" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_OtherNoncurrentAssetsAffiliatedRWY" xlink:label="OtherNoncurrentAssetsAffiliatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherNoncurrentAssetsAbstractRWY" xlink:to="OtherNoncurrentAssetsAffiliatedRWY" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_InvestmentsAndOtherAssetsAbstract" xlink:label="InvestmentsAndOtherAssetsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="InvestmentsAndOtherAssetsAbstract" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_AllowanceForDoubtfulAccountsIOAByGroup" xlink:label="AllowanceForDoubtfulAccountsIOAByGroup"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="AllowanceForDoubtfulAccountsIOAByGroup" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_InvestmentSecurities" xlink:label="InvestmentSecurities"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="InvestmentSecurities" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_StocksOfSubsidiariesAndAffiliates" xlink:label="StocksOfSubsidiariesAndAffiliates"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="StocksOfSubsidiariesAndAffiliates" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_InvestmentsInCapital" xlink:label="InvestmentsInCapital"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="InvestmentsInCapital" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_InvestmentsInCapitalOfSubsidiariesAndAffiliates" xlink:label="InvestmentsInCapitalOfSubsidiariesAndAffiliates"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="InvestmentsInCapitalOfSubsidiariesAndAffiliates" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LongTermLoansReceivable" xlink:label="LongTermLoansReceivable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="LongTermLoansReceivable" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LongTermPrepaidExpenses" xlink:label="LongTermPrepaidExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="LongTermPrepaidExpenses" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DeferredTaxAssetsIOA" xlink:label="DeferredTaxAssetsIOA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="DeferredTaxAssetsIOA" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_OtherIOA" xlink:label="OtherIOA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="OtherIOA" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_InvestmentsAndOtherAssets" xlink:label="InvestmentsAndOtherAssets"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InvestmentsAndOtherAssetsAbstract" xlink:to="InvestmentsAndOtherAssets" priority="0" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_NoncurrentAssets" xlink:label="NoncurrentAssets"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NoncurrentAssetsAbstract" xlink:to="NoncurrentAssets" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DeferredAssetsAbstract" xlink:label="DeferredAssetsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsAbstract" xlink:to="DeferredAssetsAbstract" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DeferredDisasterLossDARWY" xlink:label="DeferredDisasterLossDARWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DeferredAssetsAbstract" xlink:to="DeferredDisasterLossDARWY" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_DeferredAssets" xlink:label="DeferredAssets"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DeferredAssetsAbstract" xlink:to="DeferredAssets" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_Assets" xlink:label="Assets"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsAbstract" xlink:to="Assets" priority="0" order="4.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BalanceSheetLineItems" xlink:to="LiabilitiesAbstract" priority="0" order="2.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BalanceSheetLineItems" xlink:to="NetAssetsAbstract" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_LiabilitiesAndNetAssets" xlink:label="LiabilitiesAndNetAssets"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BalanceSheetLineItems" xlink:to="LiabilitiesAndNetAssets" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_BalanceSheetAbstract" xlink:label="BalanceSheetAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2018-03-31.xsd#jppfs_cor_BalanceSheetTable" xlink:label="BalanceSheetTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BalanceSheetAbstract" xlink:to="BalanceSheetTable" priority="0" order="1.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BalanceSheetAbstract" xlink:to="BalanceSheetLineItems" priority="0" order="2.0"/>
+  </link:definitionLink>
+</link:linkbase>

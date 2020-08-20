@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ExplanationAboutCorporateGovernance-11" xlink:type="simple" xlink:href="../jpcrp_rt_2018-03-31.xsd#rol_std_ExplanationAboutCorporateGovernance-11"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ExplanationAboutCorporateGovernance-11">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_SequentialNumbersAxis" xlink:label="SequentialNumbersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row11Member" xlink:label="Row11Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row11Member" priority="0" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row12Member" xlink:label="Row12Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row12Member" priority="0" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row13Member" xlink:label="Row13Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row13Member" priority="0" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row14Member" xlink:label="Row14Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row14Member" priority="0" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row15Member" xlink:label="Row15Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row15Member" priority="0" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row16Member" xlink:label="Row16Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row16Member" priority="0" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row17Member" xlink:label="Row17Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row17Member" priority="0" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row18Member" xlink:label="Row18Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row18Member" priority="0" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row19Member" xlink:label="Row19Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row19Member" priority="0" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row20Member" xlink:label="Row20Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row20Member" priority="0" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row21Member" xlink:label="Row21Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row21Member" priority="0" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row22Member" xlink:label="Row22Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row22Member" priority="0" order="22.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row23Member" xlink:label="Row23Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row23Member" priority="0" order="23.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row24Member" xlink:label="Row24Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row24Member" priority="0" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row25Member" xlink:label="Row25Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row25Member" priority="0" order="25.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row26Member" xlink:label="Row26Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row26Member" priority="0" order="26.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row27Member" xlink:label="Row27Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row27Member" priority="0" order="27.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row28Member" xlink:label="Row28Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row28Member" priority="0" order="28.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row29Member" xlink:label="Row29Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row29Member" priority="0" order="29.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row30Member" xlink:label="Row30Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row30Member" priority="0" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row4Member" xlink:label="Row4Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row4Member" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row5Member" xlink:label="Row5Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row5Member" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row6Member" xlink:label="Row6Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row6Member" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row7Member" xlink:label="Row7Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row7Member" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row8Member" xlink:label="Row8Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row8Member" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row9Member" xlink:label="Row9Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row9Member" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row10Member" xlink:label="Row10Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row10Member" priority="0" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row1Member" xlink:label="Row1Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row1Member" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row2Member" xlink:label="Row2Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row2Member" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_Row3Member" xlink:label="Row3Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row3Member" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_ExplanationAboutCorporateGovernanceHeading" xlink:label="ExplanationAboutCorporateGovernanceHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_EquitySecuritiesHeldInformationAboutCorporateGovernanceAbstract" xlink:label="EquitySecuritiesHeldInformationAboutCorporateGovernanceAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="EquitySecuritiesHeldInformationAboutCorporateGovernanceAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract" xlink:label="GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EquitySecuritiesHeldInformationAboutCorporateGovernanceAbstract" xlink:to="GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyTable" xlink:label="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract" xlink:to="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyTable" priority="0" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyTable" xlink:to="SequentialNumbersAxis" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:label="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="GroupCompanyHoldingLargestAmountOfInvestmentEquitySecuritiesInGroupEquitySecuritiesHeldAbstract" xlink:to="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_NameOfSecuritiesDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" xlink:label="NameOfSecuritiesDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:to="NameOfSecuritiesDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_NumberOfSharesHeldDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" xlink:label="NumberOfSharesHeldDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:to="NumberOfSharesHeldDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_BookValueDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" xlink:label="BookValueDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:to="BookValueDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_PurposesOfHoldingDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" xlink:label="PurposesOfHoldingDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompanyLineItems" xlink:to="PurposesOfHoldingDetailsOfSpecifiedInvestmentEquitySecuritiesHeldForPurposesOtherThanPureInvestmentLargestHoldingCompany" priority="0" order="4.0"/>
+  </link:definitionLink>
+</link:linkbase>

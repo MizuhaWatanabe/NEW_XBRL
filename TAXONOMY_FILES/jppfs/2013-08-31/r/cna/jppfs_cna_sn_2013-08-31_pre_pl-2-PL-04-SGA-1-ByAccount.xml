@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jppfs/cna/role/label" xlink:type="simple" xlink:href="../../jppfs_rt_2013-08-31.xsd#rol_CNALabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_SemiAnnualStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2013-08-31.xsd#rol_std_SemiAnnualStatementOfIncome"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_SemiAnnualStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesAbstractCNA" xlink:label="OperatingExpensesAbstractCNA"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesGeneralAbstractCNA" xlink:label="OperatingExpensesGeneralAbstractCNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesAbstractCNA" xlink:to="OperatingExpensesGeneralAbstractCNA" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_DirectorsCompensationsSGA" xlink:label="DirectorsCompensationsSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="DirectorsCompensationsSGA" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_SalariesAndAllowancesOECNA" xlink:label="SalariesAndAllowancesOECNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="SalariesAndAllowancesOECNA" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_RetirementPaymentsSGA" xlink:label="RetirementPaymentsSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="RetirementPaymentsSGA" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_WelfareExpensesSGA" xlink:label="WelfareExpensesSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="WelfareExpensesSGA" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OfficeCostSGA" xlink:label="OfficeCostSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="OfficeCostSGA" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_TravelingAndCommunicationExpensesSGA" xlink:label="TravelingAndCommunicationExpensesSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="TravelingAndCommunicationExpensesSGA" order="6.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/cna/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_RentsSGA" xlink:label="RentsSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="RentsSGA" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_AssociationAndOtherMembershipFeeSGACNA" xlink:label="AssociationAndOtherMembershipFeeSGACNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="AssociationAndOtherMembershipFeeSGACNA" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_TaxesAndDuesSGA" xlink:label="TaxesAndDuesSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="TaxesAndDuesSGA" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_DepreciationSGA" xlink:label="DepreciationSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="DepreciationSGA" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherOECNA" xlink:label="OtherOECNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="OtherOECNA" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OperatingExpensesGeneralCNA" xlink:label="OperatingExpensesGeneralCNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesGeneralAbstractCNA" xlink:to="OperatingExpensesGeneralCNA" order="12.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+  </link:presentationLink>
+</link:linkbase>

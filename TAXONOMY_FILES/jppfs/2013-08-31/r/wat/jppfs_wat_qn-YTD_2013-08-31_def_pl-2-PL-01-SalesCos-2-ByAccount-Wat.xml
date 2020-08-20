@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_YearToQuarterEndStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2013-08-31.xsd#rol_std_YearToQuarterEndStatementOfIncome"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_YearToQuarterEndStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_StatementOfIncomeLineItems" xlink:label="StatementOfIncomeLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_RevenueShippingAbstract" xlink:label="RevenueShippingAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="RevenueShippingAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FreightAndOtherRevenueShippingAbstract" xlink:label="FreightAndOtherRevenueShippingAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="RevenueShippingAbstract" xlink:to="FreightAndOtherRevenueShippingAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FreightRevenueShipping" xlink:label="FreightRevenueShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FreightAndOtherRevenueShippingAbstract" xlink:to="FreightRevenueShipping" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherRevenueShipping" xlink:label="OtherRevenueShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FreightAndOtherRevenueShippingAbstract" xlink:to="OtherRevenueShipping" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FreightAndOtherRevenueShipping" xlink:label="FreightAndOtherRevenueShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FreightAndOtherRevenueShippingAbstract" xlink:to="FreightAndOtherRevenueShipping" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ShipLeaseRevenueShipping" xlink:label="ShipLeaseRevenueShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="RevenueShippingAbstract" xlink:to="ShipLeaseRevenueShipping" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherShippingBusinessRevenueRevenueShipping" xlink:label="OtherShippingBusinessRevenueRevenueShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="RevenueShippingAbstract" xlink:to="OtherShippingBusinessRevenueRevenueShipping" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ShippingBusinessRevenueWAT" xlink:label="ShippingBusinessRevenueWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="RevenueShippingAbstract" xlink:to="ShippingBusinessRevenueWAT" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ShippingBusinessExpensesAbstract" xlink:label="ShippingBusinessExpensesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="ShippingBusinessExpensesAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_NavigationExpensesShippingBusinessExpensesAbstract" xlink:label="NavigationExpensesShippingBusinessExpensesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShippingBusinessExpensesAbstract" xlink:to="NavigationExpensesShippingBusinessExpensesAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FreightExpensesNaviExpensesShipping" xlink:label="FreightExpensesNaviExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NavigationExpensesShippingBusinessExpensesAbstract" xlink:to="FreightExpensesNaviExpensesShipping" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_FuelExpensesNaviExpensesShipping" xlink:label="FuelExpensesNaviExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NavigationExpensesShippingBusinessExpensesAbstract" xlink:to="FuelExpensesNaviExpensesShipping" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_PortExpensesNaviExpensesShipping" xlink:label="PortExpensesNaviExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NavigationExpensesShippingBusinessExpensesAbstract" xlink:to="PortExpensesNaviExpensesShipping" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherNavigationExpensesNaviExpensesShipping" xlink:label="OtherNavigationExpensesNaviExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NavigationExpensesShippingBusinessExpensesAbstract" xlink:to="OtherNavigationExpensesNaviExpensesShipping" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_NavigationExpensesExpensesShipping" xlink:label="NavigationExpensesExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NavigationExpensesShippingBusinessExpensesAbstract" xlink:to="NavigationExpensesExpensesShipping" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ShipExpensesExpensesShippingAbstract" xlink:label="ShipExpensesExpensesShippingAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShippingBusinessExpensesAbstract" xlink:to="ShipExpensesExpensesShippingAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_CrewExpensesShipExpensesShippingBusinessExpenses" xlink:label="CrewExpensesShipExpensesShippingBusinessExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="CrewExpensesShipExpensesShippingBusinessExpenses" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ProvisionForRetirementBenefitsShipExpensesShipping" xlink:label="ProvisionForRetirementBenefitsShipExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="ProvisionForRetirementBenefitsShipExpensesShipping" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ShipSuppliesExpensesShipExpensesShipping" xlink:label="ShipSuppliesExpensesShipExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="ShipSuppliesExpensesShipExpensesShipping" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_InsuranceExpensesOfShipsShipExpensesShipping" xlink:label="InsuranceExpensesOfShipsShipExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="InsuranceExpensesOfShipsShipExpensesShipping" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_RepairExpensesOfShipsShipExpensesShipping" xlink:label="RepairExpensesOfShipsShipExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="RepairExpensesOfShipsShipExpensesShipping" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ProvisionForSpecialRepairsShipExpensesShipping" xlink:label="ProvisionForSpecialRepairsShipExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="ProvisionForSpecialRepairsShipExpensesShipping" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_DepreciationShipsShipExpensesShipping" xlink:label="DepreciationShipsShipExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="DepreciationShipsShipExpensesShipping" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherShipExpensesShipExpensesShipping" xlink:label="OtherShipExpensesShipExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="OtherShipExpensesShipExpensesShipping" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ShipExpensesExpensesShipping" xlink:label="ShipExpensesExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShipExpensesExpensesShippingAbstract" xlink:to="ShipExpensesExpensesShipping" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ShipRentalFeeExpensesShipping" xlink:label="ShipRentalFeeExpensesShipping"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShippingBusinessExpensesAbstract" xlink:to="ShipRentalFeeExpensesShipping" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherShippingBusinessExpensesWAT" xlink:label="OtherShippingBusinessExpensesWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShippingBusinessExpensesAbstract" xlink:to="OtherShippingBusinessExpensesWAT" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_ShippingBusinessExpensesWAT" xlink:label="ShippingBusinessExpensesWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShippingBusinessExpensesAbstract" xlink:to="ShippingBusinessExpensesWAT" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherBusinessRevenueAbstractWAT" xlink:label="OtherBusinessRevenueAbstractWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OtherBusinessRevenueAbstractWAT" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_BuildingBusinessRevenueOtherBusinessRevenueWAT" xlink:label="BuildingBusinessRevenueOtherBusinessRevenueWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherBusinessRevenueAbstractWAT" xlink:to="BuildingBusinessRevenueOtherBusinessRevenueWAT" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_RevenueOfWarehouseWorkOtherBusinessRevenueWAT" xlink:label="RevenueOfWarehouseWorkOtherBusinessRevenueWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherBusinessRevenueAbstractWAT" xlink:to="RevenueOfWarehouseWorkOtherBusinessRevenueWAT" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherBusinessRevenueWAT" xlink:label="OtherBusinessRevenueWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherBusinessRevenueAbstractWAT" xlink:to="OtherBusinessRevenueWAT" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherBusinessExpensesAbstractWAT" xlink:label="OtherBusinessExpensesAbstractWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OtherBusinessExpensesAbstractWAT" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_BuildingBusinessExpensesOtherBusinessRevenueWAT" xlink:label="BuildingBusinessExpensesOtherBusinessRevenueWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherBusinessExpensesAbstractWAT" xlink:to="BuildingBusinessExpensesOtherBusinessRevenueWAT" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_WarehouseBusinessExpensesOtherBusinessRevenueWAT" xlink:label="WarehouseBusinessExpensesOtherBusinessRevenueWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherBusinessExpensesAbstractWAT" xlink:to="WarehouseBusinessExpensesOtherBusinessRevenueWAT" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2013-08-31.xsd#jppfs_cor_OtherBusinessExpensesWAT" xlink:label="OtherBusinessExpensesWAT"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OtherBusinessExpensesAbstractWAT" xlink:to="OtherBusinessExpensesWAT" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>

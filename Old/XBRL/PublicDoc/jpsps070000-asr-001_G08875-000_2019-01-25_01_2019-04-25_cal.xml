@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef xlink:type="simple" roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_BalanceSheet" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_rt_2018-02-28.xsd#rol_BalanceSheet"/>
+  <link:roleRef xlink:type="simple" roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_StatementOfIncomeAndRetainedEarnings" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_rt_2018-02-28.xsd#rol_StatementOfIncomeAndRetainedEarnings"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_BalanceSheet">
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_Assets" xlink:label="Assets" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_CurrentAssets" xlink:label="CurrentAssets_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="Assets" xlink:to="CurrentAssets_2" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_CurrentAssets" xlink:label="CurrentAssets" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_DepositsCAFND" xlink:label="DepositsCAFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="DepositsCAFND" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_CallLoansCAFND" xlink:label="CallLoansCAFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="CallLoansCAFND" order="2.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_MoneyHeldInTrustCAFND" xlink:label="MoneyHeldInTrustCAFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="MoneyHeldInTrustCAFND" order="3.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_StocksCAFND" xlink:label="StocksCAFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="StocksCAFND" order="4.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_AccruedDividendReceivableCAFND" xlink:label="AccruedDividendReceivableCAFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="AccruedDividendReceivableCAFND" order="5.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_SecurityInvestmentTrustBeneficiarySecuritiesCAFND" xlink:label="SecurityInvestmentTrustBeneficiarySecuritiesCAFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="SecurityInvestmentTrustBeneficiarySecuritiesCAFND" order="6.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_InvestmentSecuritiesCAFND" xlink:label="InvestmentSecuritiesCAFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="InvestmentSecuritiesCAFND" order="7.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_ParentsTrustBeneficiarySecuritiesCAFND" xlink:label="ParentsTrustBeneficiarySecuritiesCAFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="ParentsTrustBeneficiarySecuritiesCAFND" order="8.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_AccountsReceivableEDU" xlink:label="AccountsReceivableEDU" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="AccountsReceivableEDU" order="9.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_AccruedInterest" xlink:label="AccruedInterest" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="AccruedInterest" order="10.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_LiabilitiesAndNetAssets" xlink:label="LiabilitiesAndNetAssets" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_Liabilities" xlink:label="Liabilities_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LiabilitiesAndNetAssets" xlink:to="Liabilities_2" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_NetAssets" xlink:label="NetAssets_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LiabilitiesAndNetAssets" xlink:to="NetAssets_2" order="2.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_Liabilities" xlink:label="Liabilities" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_CurrentLiabilities" xlink:label="CurrentLiabilities_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="Liabilities" xlink:to="CurrentLiabilities_2" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_CurrentLiabilities" xlink:label="CurrentLiabilities" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_DerivativeEvaluationAccountCLFND" xlink:label="DerivativeEvaluationAccountCLFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentLiabilities" xlink:to="DerivativeEvaluationAccountCLFND" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_UnpaidDividendsCLFND" xlink:label="UnpaidDividendsCLFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentLiabilities" xlink:to="UnpaidDividendsCLFND" order="2.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_RedemptionPayableCLFND" xlink:label="RedemptionPayableCLFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentLiabilities" xlink:to="RedemptionPayableCLFND" order="3.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_TrusteeFeePayableCLFND" xlink:label="TrusteeFeePayableCLFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentLiabilities" xlink:to="TrusteeFeePayableCLFND" order="4.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_InvestmentTrustManagementFeePayableCLFND" xlink:label="InvestmentTrustManagementFeePayableCLFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentLiabilities" xlink:to="InvestmentTrustManagementFeePayableCLFND" order="5.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_AccruedInterestExpensesCLFND" xlink:label="AccruedInterestExpensesCLFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentLiabilities" xlink:to="AccruedInterestExpensesCLFND" order="6.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OtherAccruedExpensesCLFND" xlink:label="OtherAccruedExpensesCLFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentLiabilities" xlink:to="OtherAccruedExpensesCLFND" order="7.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_NetAssets" xlink:label="NetAssets" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_PrincipalAndOtherFND" xlink:label="PrincipalAndOtherFND_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NetAssets" xlink:to="PrincipalAndOtherFND_2" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_PrincipalAndOtherFND" xlink:label="PrincipalAndOtherFND" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_PrincipalFND" xlink:label="PrincipalFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="PrincipalAndOtherFND" xlink:to="PrincipalFND" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_SurplusDeficitFND" xlink:label="SurplusDeficitFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="PrincipalAndOtherFND" xlink:to="SurplusDeficitFND" order="2.0" weight="1" />
+  </link:calculationLink>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_StatementOfIncomeAndRetainedEarnings">
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLoss" xlink:to="OrdinaryIncome_2" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OperatingIncome" xlink:label="OperatingIncome_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OrdinaryIncome" xlink:to="OperatingIncome_2" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OperatingIncome" xlink:label="OperatingIncome" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OperatingRevenueFND" xlink:label="OperatingRevenueFND_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncome" xlink:to="OperatingRevenueFND_2" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OperatingExpensesFND" xlink:label="OperatingExpensesFND_2" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncome" xlink:to="OperatingExpensesFND_2" order="2.0" weight="-1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OperatingRevenueFND" xlink:label="OperatingRevenueFND" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_DividendsIncomeOIFND" xlink:label="DividendsIncomeOIFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueFND" xlink:to="DividendsIncomeOIFND" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_InterestIncomeOIFND" xlink:label="InterestIncomeOIFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueFND" xlink:to="InterestIncomeOIFND" order="2.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_ProfitAndLossOnBuyingAndSellingOfSecuritiesAndOtherOIFND" xlink:label="ProfitAndLossOnBuyingAndSellingOfSecuritiesAndOtherOIFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueFND" xlink:to="ProfitAndLossOnBuyingAndSellingOfSecuritiesAndOtherOIFND" order="3.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OtherRevenueOIFND" xlink:label="OtherRevenueOIFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueFND" xlink:to="OtherRevenueOIFND" order="4.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_ForeignExchangeLossesGainsOpeCF" xlink:label="ForeignExchangeLossesGainsOpeCF" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueFND" xlink:to="ForeignExchangeLossesGainsOpeCF" order="5.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OperatingExpensesFND" xlink:label="OperatingExpensesFND" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_TrusteeFeeOEFND" xlink:label="TrusteeFeeOEFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesFND" xlink:to="TrusteeFeeOEFND" order="1.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_InterestExpensesOEFND" xlink:label="InterestExpensesOEFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesFND" xlink:to="InterestExpensesOEFND" order="2.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_InvestmentTrustManagementFeeOEFND" xlink:label="InvestmentTrustManagementFeeOEFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesFND" xlink:to="InvestmentTrustManagementFeeOEFND" order="3.0" weight="1" />
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2018-02-28/jppfs_cor_2018-02-28.xsd#jppfs_cor_OtherExpensesOEFND" xlink:label="OtherExpensesOEFND" />
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesFND" xlink:to="OtherExpensesOEFND" order="4.0" weight="1" />
+  </link:calculationLink>
+</link:linkbase>

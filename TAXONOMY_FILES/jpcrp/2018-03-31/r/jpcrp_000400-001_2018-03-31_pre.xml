@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_MajorShareholders-01" xlink:type="simple" xlink:href="../jpcrp_rt_2018-03-31.xsd#rol_std_MajorShareholders-01"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_MajorShareholders-01">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_MajorShareholdersHeading" xlink:label="MajorShareholdersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_MajorShareholdersTable" xlink:label="MajorShareholdersTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersHeading" xlink:to="MajorShareholdersTable" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_MajorShareholdersAxis" xlink:label="MajorShareholdersAxis"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersTable" xlink:to="MajorShareholdersAxis" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_MajorShareholdersMember" xlink:label="MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersAxis" xlink:to="MajorShareholdersMember" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No1MajorShareholdersMember" xlink:label="No1MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No1MajorShareholdersMember" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No2MajorShareholdersMember" xlink:label="No2MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No2MajorShareholdersMember" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No3MajorShareholdersMember" xlink:label="No3MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No3MajorShareholdersMember" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No4MajorShareholdersMember" xlink:label="No4MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No4MajorShareholdersMember" priority="0" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No5MajorShareholdersMember" xlink:label="No5MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No5MajorShareholdersMember" priority="0" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No6MajorShareholdersMember" xlink:label="No6MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No6MajorShareholdersMember" priority="0" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No7MajorShareholdersMember" xlink:label="No7MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No7MajorShareholdersMember" priority="0" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No8MajorShareholdersMember" xlink:label="No8MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No8MajorShareholdersMember" priority="0" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No9MajorShareholdersMember" xlink:label="No9MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No9MajorShareholdersMember" priority="0" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No10MajorShareholdersMember" xlink:label="No10MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No10MajorShareholdersMember" priority="0" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No11MajorShareholdersMember" xlink:label="No11MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No11MajorShareholdersMember" priority="0" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No12MajorShareholdersMember" xlink:label="No12MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No12MajorShareholdersMember" priority="0" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No13MajorShareholdersMember" xlink:label="No13MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No13MajorShareholdersMember" priority="0" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No14MajorShareholdersMember" xlink:label="No14MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No14MajorShareholdersMember" priority="0" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_No15MajorShareholdersMember" xlink:label="No15MajorShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersMember" xlink:to="No15MajorShareholdersMember" priority="0" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_MajorShareholdersLineItems" xlink:label="MajorShareholdersLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersHeading" xlink:to="MajorShareholdersLineItems" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_NameMajorShareholders" xlink:label="NameMajorShareholders"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersLineItems" xlink:to="NameMajorShareholders" priority="0" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_AddressMajorShareholders" xlink:label="AddressMajorShareholders"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersLineItems" xlink:to="AddressMajorShareholders" priority="0" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_NumberOfSharesHeld" xlink:label="NumberOfSharesHeld"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersLineItems" xlink:to="NumberOfSharesHeld" priority="0" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2018-03-31.xsd#jpcrp_cor_ShareholdingRatio" xlink:label="ShareholdingRatio"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorShareholdersLineItems" xlink:to="ShareholdingRatio" priority="0" order="4.0"/>
+  </link:presentationLink>
+</link:linkbase>

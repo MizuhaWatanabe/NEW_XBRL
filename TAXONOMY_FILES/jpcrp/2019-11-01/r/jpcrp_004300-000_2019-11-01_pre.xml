@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSignificantAccountingPoliciesSemiAnnualFinancialStatements" xlink:type="simple" xlink:href="../jpcrp_rt_2019-11-01.xsd#rol_std_NotesSignificantAccountingPoliciesSemiAnnualFinancialStatements"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSignificantAccountingPoliciesSemiAnnualFinancialStatements">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2019-11-01/jppfs_cor_2019-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2019-11-01/jppfs_cor_2019-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsHeading" xlink:label="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsTable" xlink:label="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsHeading" xlink:to="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:label="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsHeading" xlink:to="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForMeasuringAssetsTextBlock" xlink:label="AccountingPolicyForMeasuringAssetsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:to="AccountingPolicyForMeasuringAssetsTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForDepreciationOfAssetsTextBlock" xlink:label="AccountingPolicyForDepreciationOfAssetsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:to="AccountingPolicyForDepreciationOfAssetsTextBlock" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForProvisionsTextBlock" xlink:label="AccountingPolicyForProvisionsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:to="AccountingPolicyForProvisionsTextBlock" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForRecognitionOfRevenuesAndExpensesTextBlock" xlink:label="AccountingPolicyForRecognitionOfRevenuesAndExpensesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:to="AccountingPolicyForRecognitionOfRevenuesAndExpensesTextBlock" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForForeignCurrencyTranslationTextBlock" xlink:label="AccountingPolicyForForeignCurrencyTranslationTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:to="AccountingPolicyForForeignCurrencyTranslationTextBlock" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_AccountingPolicyForHedgingTextBlock" xlink:label="AccountingPolicyForHedgingTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:to="AccountingPolicyForHedgingTextBlock" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_ScopeOfCashAndCashEquivalentsInStatementOfCashFlowsTextBlock" xlink:label="ScopeOfCashAndCashEquivalentsInStatementOfCashFlowsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:to="ScopeOfCashAndCashEquivalentsInStatementOfCashFlowsTextBlock" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-11-01.xsd#jpcrp_cor_OtherSignificantInformationForPreparationOfFinancialStatementsTextBlock" xlink:label="OtherSignificantInformationForPreparationOfFinancialStatementsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSignificantAccountingPoliciesSemiAnnualFinancialStatementsLineItems" xlink:to="OtherSignificantInformationForPreparationOfFinancialStatementsTextBlock" order="8.0"/>
+  </link:presentationLink>
+</link:linkbase>

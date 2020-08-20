@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<!-- Edited with XiRUTE .NET Library 01-08 -->
+<schema xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:jpaud-aai-cc_E02167-000="http://disclosure.edinet-fsa.go.jp/jpaud/aai/cc/001/E02167-000/2016-03-31/01/2016-06-30" elementFormDefault="qualified" targetNamespace="http://disclosure.edinet-fsa.go.jp/jpaud/aai/cc/001/E02167-000/2016-03-31/01/2016-06-30" xmlns="http://www.w3.org/2001/XMLSchema">
+  <import schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2016-02-29/jpcrp_cor_2016-02-29.xsd" namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2016-02-29/jpcrp_cor" />
+  <import schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2016-02-29/jpcrp_rt_2016-02-29.xsd" namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2016-02-29/jpcrp_rt" />
+  <annotation>
+    <appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2016-02-29/label/jpcrp_2016-02-29_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2016-02-29/label/jpcrp_2016-02-29_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2016-02-29/label/jpcrp_2016-02-29_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpaud-aai-cc-001_E02167-000_2016-03-31_01_2016-06-30_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />
+    </appinfo>
+  </annotation>
+</schema>

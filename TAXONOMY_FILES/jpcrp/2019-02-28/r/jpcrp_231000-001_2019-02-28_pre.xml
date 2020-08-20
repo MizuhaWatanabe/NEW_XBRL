@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ExplanationAboutCorporateGovernance-01" xlink:type="simple" xlink:href="../jpcrp_rt_2019-02-28.xsd#rol_std_ExplanationAboutCorporateGovernance-01"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ExplanationAboutCorporateGovernance-01">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-02-28.xsd#jpcrp_cor_ExplanationAboutCorporateGovernanceHeading" xlink:label="ExplanationAboutCorporateGovernanceHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-02-28.xsd#jpcrp_cor_DescriptionOfFactThatCorporateGovernanceSystemChoiceFromThreeCategoriesWasChangedTextBlock" xlink:label="DescriptionOfFactThatCorporateGovernanceSystemChoiceFromThreeCategoriesWasChangedTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="DescriptionOfFactThatCorporateGovernanceSystemChoiceFromThreeCategoriesWasChangedTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-02-28.xsd#jpcrp_cor_CorporateGovernanceCompanyWithCorporateAuditorsTextBlock" xlink:label="CorporateGovernanceCompanyWithCorporateAuditorsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="CorporateGovernanceCompanyWithCorporateAuditorsTextBlock" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-02-28.xsd#jpcrp_cor_CorporateGovernanceCompanyWithAuditAndSupervisoryCommitteeTextBlock" xlink:label="CorporateGovernanceCompanyWithAuditAndSupervisoryCommitteeTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="CorporateGovernanceCompanyWithAuditAndSupervisoryCommitteeTextBlock" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-02-28.xsd#jpcrp_cor_CorporateGovernanceCompanyWithNominatingAndOtherCommitteesTextBlock" xlink:label="CorporateGovernanceCompanyWithNominatingAndOtherCommitteesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="CorporateGovernanceCompanyWithNominatingAndOtherCommitteesTextBlock" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-02-28.xsd#jpcrp_cor_InternalAuditAndAuditByCorporateAuditorsAuditAndSupervisoryCommitteeTextBlock" xlink:label="InternalAuditAndAuditByCorporateAuditorsAuditAndSupervisoryCommitteeTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="InternalAuditAndAuditByCorporateAuditorsAuditAndSupervisoryCommitteeTextBlock" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-02-28.xsd#jpcrp_cor_OutsideDirectorsAndOutsideCorporateAuditorsTextBlock" xlink:label="OutsideDirectorsAndOutsideCorporateAuditorsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="OutsideDirectorsAndOutsideCorporateAuditorsTextBlock" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2019-02-28.xsd#jpcrp_cor_RemunerationEtcPaidByGroupToEachDirectorOrOtherOfficerTextBlock" xlink:label="RemunerationEtcPaidByGroupToEachDirectorOrOtherOfficerTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExplanationAboutCorporateGovernanceHeading" xlink:to="RemunerationEtcPaidByGroupToEachDirectorOrOtherOfficerTextBlock" order="7.0"/>
+  </link:presentationLink>
+</link:linkbase>
