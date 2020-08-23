@@ -217,7 +217,7 @@ def digitize(_str):
         return _str
     return int(_str)
 
-company_list = [7203, 7267]
+company_list = ['TEST']
 taxonomy_check_needed = False
 
 JGAAP_role_ref = {'BS': ['rol_ConsolidatedBalanceSheet', 'CurrentYearInstant'],
