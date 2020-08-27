@@ -60,9 +60,9 @@ def download_xbrl(search_conditions):
 
 
 search_conditions = {
-        'start_date': datetime.date(2019, 12, 11),
-        'end_date'  : datetime.date(2020, 8, 9),
-        'stocks'    : [7201, 7202, 7203, 7205, 7211, 7261, 7267, 7269, 7270, 7272, 6902, 7259, 4666],
+        'start_date': datetime.date(2015, 12, 11),
+        'end_date'  : datetime.date(2020, 8, 27),
+        'stocks'    : [4732],
         'forms'     : ['030000', '030001', '043000', '043001'],
         'ordinance' : '010'
         }

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import edinet, taxonomies
+import edinet, xbrl_config
 import pandas as pd
 import os, urllib3, openpyxl, requests
 from pathlib import Path
@@ -191,7 +191,7 @@ class Node():
 
 
 def taxonomy_check(taxonomy_dir):
-    for year, url in taxonomies.link_list.items():
+    for year, url in xbrl_config.taxonomy_link_list.items():
         taxonomy_file = taxonomy_dir.joinpath(f'{year}_taxonomy.zip')
         res = requests.get(url, stream=True)
         with taxonomy_file.open(mode='wb') as f:
@@ -212,30 +212,29 @@ def taxonomy_check(taxonomy_dir):
 
 def digitize(_str):
     try:
-        int(_str)
+        float(_str)
     except:
         return _str
-    return int(_str)
+    return float(_str)
 
 company_list = ['TEST']
 taxonomy_check_needed = False
 
-JGAAP_role_ref = {'BS': ['rol_ConsolidatedBalanceSheet', 'CurrentYearInstant'],
-        'PL': ['rol_ConsolidatedStatementOfIncome', 'CurrentYearDuration'],
-        'CF': ['rol_ConsolidatedStatementOfCashFlows', 'CurrentYearDuration']
-        }
 
 taxonomy_dir = Path.cwd().joinpath('TAXONOMY_FILES')
 taxonomy_dir.mkdir(parents=True, exist_ok=True)
 if taxonomy_check_needed: taxonomy_check_needed = taxonomy_check(taxonomy_dir)
 
-for JGAAP_role in JGAAP_role_ref:
+for JGAAP_role in xbrl_config.JGAAP_role_ref:
     for company in company_list:
         company_dir = Path.cwd().joinpath('XBRL_FILES', str(company))
         doc_id_list = [doc_id for doc_id in os.listdir(company_dir) if not doc_id.startswith('.')]
         excel_dir = Path.cwd().joinpath(f'EXCEL_FILES/{str(company)}')
         excel_dir.mkdir(parents=True, exist_ok=True)
 
+        initial_flag = True
+        financial_statement = pd.DataFrame()
+        period_list =[]
         for doc_id in doc_id_list:
             doc_id_dir = company_dir.joinpath(doc_id)
             xbrl_dir = edinet.xbrl_file.XBRLDir(doc_id_dir)
@@ -257,8 +256,8 @@ for JGAAP_role in JGAAP_role_ref:
                     role_name = taxonomy.read(role_refs[r]).element.find('link:definition').text
                     roles[role_name] = r
 
-                role_name_BS = [k for k, v in roles.items() if JGAAP_role_ref[JGAAP_role][0] in v][0]
-                pre_def = xbrl_dir.pre.find('link:presentationLink', {'xlink:role': roles[role_name_BS]})
+                role_name_xlink = [k for k, v in roles.items() if xbrl_config.JGAAP_role_ref[JGAAP_role][0] in v][0]
+                pre_def = xbrl_dir.pre.find('link:presentationLink', {'xlink:role': roles[role_name_xlink]})
                 nodes = {}
                 for i, arc in enumerate(pre_def.find_all('link:presentationArc')):
                     if not arc['xlink:arcrole'].endswith('parent-child'):
@@ -294,10 +293,10 @@ for JGAAP_role in JGAAP_role_ref:
                         name = p if isinstance(p, str) else p.name
                         order = '0' if isinstance(p, str) else p.order
                         item[f'parent_{i}'] = name
-                        item[f'parent_{i}_order'] = int(order)
+                        item[f'parent_{i}_order'] = digitize(order)
 
                     item['element'] = n.name
-                    item['order'] = int(n.order)
+                    item['order'] = digitize(n.order)
                     item['depth'] = n.depth
                     item['label'] = taxonomy.read(n.location).label().text
 
@@ -331,7 +330,7 @@ for JGAAP_role in JGAAP_role_ref:
                             tag_name = f"{n}:{tag_name.replace(n + '_', '')}"
                             break
 
-                    tag = xbrl.find(tag_name, {'contextRef': JGAAP_role_ref[JGAAP_role][1]})
+                    tag = xbrl.find(tag_name, {'contextRef': xbrl_config.JGAAP_role_ref[JGAAP_role][1]})
                     element = tag.element
                     if element is None:
                         continue
@@ -340,43 +339,69 @@ for JGAAP_role in JGAAP_role_ref:
                     for k in df.columns:
                         item[k] = row[k]
 
-                    parent_sort = ['order']
                     for i in range(parent_depth):
                         parent_label = df[df["element"] == row[f"parent_{i}"]]["label"]
                         item[f"parent_{i}_name"] = "" if len(parent_label) == 0 else parent_label.tolist()[0]
-                        parent_sort.append(f'parent_{parent_depth - i - 1}_order')
+
+                    label_reallocated = item['label']
+                    item.pop('label')
+                    item['label'] = label_reallocated
 
                     context_id = element["contextRef"]
                     if not context_id.endswith("NonConsolidatedMember"):
                         context = xbrl.find("xbrli:context", {"id": context_id})
                         if item["period_type"] == "duration":
-                            item["period"] = context.find("xbrli:endDate").text
-                            item["period_begin"] = context.find("xbrli:startDate").text
+                            period = context.find("xbrli:endDate").text
                         else:
-                            item["period"] = context.find("xbrli:instant").text
-                            item["period_begin"] = None
+                            period = context.find("xbrli:instant").text
 
-                        item[item["period"]] = digitize(element.text)
                         item["unit"] = element["unitRef"]
+                        item[period] = digitize(element.text)
 
                         xbrl_data.append(item)
 
-                file_name_FY = current_FY_end.strftime('FY%-m_%y')
-                file_name_Q = '' if FY_or_Q == 'FY' else f'_{FY_or_Q}'
-                file_name = file_name_FY + file_name_Q
-
+                period_list += [period]
                 xbrl_data = pd.DataFrame(xbrl_data)
-                xbrl_data.sort_values(parent_sort)
-                xbrl_data.to_excel(f'{excel_dir}/{company}_{file_name}_{doc_id}_{JGAAP_role}.xlsx', sheet_name=f'{file_name}')
+                if initial_flag:
+                    financial_statement = xbrl_data.set_index('element')
+                    fs_parent_depth = parent_depth
+                    initial_flag = False
+                else:
+                    financial_statement[period] = ''
+                    for index, row in xbrl_data.iterrows():
+                        if row['element'] in financial_statement.index.values:
+                            financial_statement.at[row['element'], period] = row[period]
+                        else:
+                            parent_num = row['depth'] - 1
+                            extracted_df = financial_statement.copy()
+                            extracted_df = extracted_df[extracted_df[f'parent_{parent_num}'] == row[f'parent_{parent_num}']]
+                            current_max_order = digitize(extracted_df['order'].max())
+                            extracted_row = extracted_df[extracted_df['order'] == current_max_order]
 
+                            added_row = {}
+                            for i in range(fs_parent_depth):
+                                added_row[f'parent_{i}'] = extracted_row[f'parent_{i}'].values[0]
+                                added_row[f'parent_{i}_order'] = digitize(extracted_row[f'parent_{i}_order'].values[0])
+                                added_row[f'parent_{i}_name'] = row[f'parent_{i}_name']
+                            added_row['order'] = current_max_order + 1
+                            added_row['depth'] = row['depth']
 
+                            for item in xbrl_config.miscellaneous_output_items:
+                                added_row[item] = row[item]
 
+                            added_row['label'] = row['label']
+                            added_row['unit'] = row['unit']
+                            added_row[period] = row[period]
 
+                            added_data = pd.DataFrame([added_row]).set_index('element')
+                            financial_statement = financial_statement.append(added_data)
 
+        period_list.sort()
+        parent_list = [f'parent_{i}' for i in range(fs_parent_depth)]
+        parent_order_list = [f'parent_{i}_order' for i in range(fs_parent_depth)]
+        parent_name_list = [f'parent_{i}_name' for i in range(fs_parent_depth)]
+        output_order = parent_list + parent_order_list + ['order', 'depth'] + xbrl_config.miscellaneous_output_items + parent_name_list + ['label', 'unit'] + period_list
 
-
-
-
-
-
-
+        financial_statement.sort_values(by=[c for c in df.columns if c.endswith('order')], inplace=True)
+        financial_statement = financial_statement.reset_index()[output_order]
+        financial_statement.to_excel(f'{excel_dir}/{company}_{JGAAP_role}.xlsx', sheet_name=f'{JGAAP_role}')
