@@ -217,7 +217,7 @@ def digitize(_str):
         return _str
     return float(_str)
 
-company_list = ['TEST']
+company_list = [7261, 7269]
 taxonomy_check_needed = False
 
 
@@ -355,6 +355,7 @@ for JGAAP_role in xbrl_config.JGAAP_role_ref:
                         else:
                             period = context.find("xbrli:instant").text
 
+                        period = period + '_amd' if doc_id.endswith('_amd') else period
                         item["unit"] = element["unitRef"]
                         item[period] = digitize(element.text)
 
