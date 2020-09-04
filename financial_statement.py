@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import edinet, xbrl_config
 import pandas as pd
+import numpy as np
 import os, urllib3, openpyxl, requests
 from pathlib import Path
 from datetime import datetime
@@ -217,7 +218,7 @@ def digitize(_str):
         return _str
     return float(_str)
 
-company_list = [7261, 7269]
+company_list = [7201]
 taxonomy_check_needed = False
 
 
@@ -244,6 +245,12 @@ for JGAAP_role in xbrl_config.JGAAP_role_ref:
             current_FY_end = datetime.strptime(xbrl_dir.xbrl.find('jpdei_cor:CurrentFiscalYearEndDateDEI').text, '%Y-%m-%d')
 
             if FY_or_Q == 'FY' and accounting_standard == 'Japan GAAP':
+                filing_date = xbrl_dir.xbrl.find('jpcrp_cor:FilingDateCoverPage').text
+                company_name = xbrl_dir.xbrl.find('jpcrp_cor:CompanyNameCoverPage').text
+                fiscal_year = xbrl_dir.xbrl.find('jpcrp_cor:FiscalYearCoverPage').text
+                document_title = xbrl_dir.xbrl.find('jpcrp_cor:DocumentTitleCoverPage').text
+                print(filing_date, company_name, fiscal_year, document_title)
+
                 role_ref_tags = xbrl_dir.xbrl.find_all('link:roleRef')
                 role_ref_elements = [t.element for t in role_ref_tags]
                 role_refs = {}
@@ -289,14 +296,28 @@ for JGAAP_role in xbrl_config.JGAAP_role_ref:
                     parents = n.get_parents()
                     parents = parents + ([''] * (parent_depth - len(parents)))
 
+                    item_order = digitize(n.order)
+                    order_bottom = 'order'
+
+                    at_bottom = False
                     for i, p in enumerate(parents):
                         name = p if isinstance(p, str) else p.name
-                        order = '0' if isinstance(p, str) else p.order
+                        if isinstance(p, str) and not at_bottom:
+                            order = digitize(n.order)
+                            item_order = np.nan
+                            order_bottom = f'parent_{i}_order'
+                            at_bottom = True
+                        elif isinstance(p, str) and at_bottom:
+                            order = np.nan
+                        else:
+                            order = digitize(p.order)
+
                         item[f'parent_{i}'] = name
                         item[f'parent_{i}_order'] = digitize(order)
 
+                    item['order'] = item_order
+                    item['order_bottom'] = order_bottom
                     item['element'] = n.name
-                    item['order'] = digitize(n.order)
                     item['depth'] = n.depth
                     item['label'] = taxonomy.read(n.location).label().text
 
@@ -311,7 +332,6 @@ for JGAAP_role in xbrl_config.JGAAP_role_ref:
                     data.append(item)
 
                 df = pd.DataFrame(data)
-                df.sort_values(by=[c for c in df.columns if c.endswith('order')], inplace=True)
 
 
                 xbrl = xbrl_dir.xbrl
@@ -376,15 +396,17 @@ for JGAAP_role in xbrl_config.JGAAP_role_ref:
                             parent_num = row['depth'] - 1
                             extracted_df = financial_statement.copy()
                             extracted_df = extracted_df[extracted_df[f'parent_{parent_num}'] == row[f'parent_{parent_num}']]
-                            current_max_order = digitize(extracted_df['order'].max())
-                            extracted_row = extracted_df[extracted_df['order'] == current_max_order]
+                            order_bottom = row['order_bottom']
+                            current_max_order = digitize(extracted_df[order_bottom].max())
+                            extracted_row = extracted_df[extracted_df[order_bottom] == current_max_order]
+                            financial_statement.loc[(financial_statement[f'parent_{parent_num}'] == row[f'parent_{parent_num}']) & (financial_statement[order_bottom] == current_max_order), order_bottom] = current_max_order + 1
 
                             added_row = {}
                             for i in range(fs_parent_depth):
-                                added_row[f'parent_{i}'] = extracted_row[f'parent_{i}'].values[0]
-                                added_row[f'parent_{i}_order'] = digitize(extracted_row[f'parent_{i}_order'].values[0])
+                                added_row[f'parent_{i}'] = np.nan if extracted_row[f'parent_{i}'].empty else extracted_row[f'parent_{i}'].values[0]
+                                added_row[f'parent_{i}_order'] = np.nan if extracted_row[f'parent_{i}_order'].empty else digitize(extracted_row[f'parent_{i}_order'].values[0])
                                 added_row[f'parent_{i}_name'] = row[f'parent_{i}_name']
-                            added_row['order'] = current_max_order + 1
+                            added_row[order_bottom] = current_max_order
                             added_row['depth'] = row['depth']
 
                             for item in xbrl_config.miscellaneous_output_items:
@@ -401,7 +423,10 @@ for JGAAP_role in xbrl_config.JGAAP_role_ref:
         parent_list = [f'parent_{i}' for i in range(fs_parent_depth)]
         parent_order_list = [f'parent_{i}_order' for i in range(fs_parent_depth)]
         parent_name_list = [f'parent_{i}_name' for i in range(fs_parent_depth)]
-        output_order = parent_list + parent_order_list + ['order', 'depth'] + xbrl_config.miscellaneous_output_items + parent_name_list + ['label', 'unit'] + period_list
+        output_order = parent_name_list + ['label', 'unit'] + period_list
+
+        # -*- For debug -*-
+#        output_order = parent_list + parent_order_list + ['order', 'order_bottom', 'depth'] + xbrl_config.miscellaneous_output_items + parent_name_list + ['label', 'unit'] + period_list
 
         financial_statement.sort_values(by=[c for c in df.columns if c.endswith('order')], inplace=True)
         financial_statement = financial_statement.reset_index()[output_order]
