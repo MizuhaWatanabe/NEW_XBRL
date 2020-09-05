@@ -218,109 +218,96 @@ def digitize(_str):
         return _str
     return float(_str)
 
-company_list = [7201]
+company_list = [4732]
 taxonomy_check_needed = False
-
 
 taxonomy_dir = Path.cwd().joinpath('TAXONOMY_FILES')
 taxonomy_dir.mkdir(parents=True, exist_ok=True)
 if taxonomy_check_needed: taxonomy_check_needed = taxonomy_check(taxonomy_dir)
 
-for JGAAP_role in xbrl_config.JGAAP_role_ref:
+for role in xbrl_config.role_ref:
     for company in company_list:
+        print(f'Compiling {role} data of {company}...')
         company_dir = Path.cwd().joinpath('XBRL_FILES', str(company))
         doc_id_list = [doc_id for doc_id in os.listdir(company_dir) if not doc_id.startswith('.')]
+        doc_id_list.sort()
         excel_dir = Path.cwd().joinpath(f'EXCEL_FILES/{str(company)}')
         excel_dir.mkdir(parents=True, exist_ok=True)
 
         initial_flag = True
         financial_statement = pd.DataFrame()
-        period_list =[]
+        period_list, period_list_only_FY =[], []
         for doc_id in doc_id_list:
             doc_id_dir = company_dir.joinpath(doc_id)
             xbrl_dir = edinet.xbrl_file.XBRLDir(doc_id_dir)
+            taxonomy = Taxonomy(xbrl_dir._document_folder, taxonomy_dir)
 
             accounting_standard = xbrl_dir.xbrl.find('jpdei_cor:AccountingStandardsDEI').text
-            FY_or_Q = xbrl_dir.xbrl.find('jpdei_cor:TypeOfCurrentPeriodDEI').text
-            current_FY_end = datetime.strptime(xbrl_dir.xbrl.find('jpdei_cor:CurrentFiscalYearEndDateDEI').text, '%Y-%m-%d')
+            FY_or_Q = 'FY' if xbrl_dir.xbrl.find('jpdei_cor:TypeOfCurrentPeriodDEI').text == 'FY' else 'Q'
+            role_key = accounting_standard + '_' + FY_or_Q
+            profile = [xbrl_dir.xbrl.find(k).text for k in xbrl_config.profile_items[FY_or_Q].values()]
+            print(profile[0], profile[1], profile[2], doc_id, profile[3])
 
-            if FY_or_Q == 'FY' and accounting_standard == 'Japan GAAP':
-                filing_date = xbrl_dir.xbrl.find('jpcrp_cor:FilingDateCoverPage').text
-                company_name = xbrl_dir.xbrl.find('jpcrp_cor:CompanyNameCoverPage').text
-                fiscal_year = xbrl_dir.xbrl.find('jpcrp_cor:FiscalYearCoverPage').text
-                document_title = xbrl_dir.xbrl.find('jpcrp_cor:DocumentTitleCoverPage').text
-                print(filing_date, company_name, fiscal_year, document_title)
+            # -*- Compiling data by FY/Q, accounting standard -*-
+            pre_def = xbrl_dir.pre.find('link:presentationLink', {'xlink:role': xbrl_config.role_ref[role][role_key][0]})
+            nodes = {}
+            for i, arc in enumerate(pre_def.find_all('link:presentationArc')):
+                if not arc['xlink:arcrole'].endswith('parent-child'):
+                    print('unexpected arctype')
+                    continue
 
-                role_ref_tags = xbrl_dir.xbrl.find_all('link:roleRef')
-                role_ref_elements = [t.element for t in role_ref_tags]
-                role_refs = {}
-                for e in role_ref_elements:
-                    role_refs[e['roleURI']] = e['xlink:href']
+                parent = Node(pre_def.find('link:loc', {'xlink:label': arc['xlink:from']}), i)
+                child = Node(pre_def.find('link:loc', {'xlink:label': arc['xlink:to']}), arc['order'])
 
-                taxonomy = Taxonomy(xbrl_dir._document_folder, taxonomy_dir)
-                roles = {}
-                for r in role_refs:
-                    role_name = taxonomy.read(role_refs[r]).element.find('link:definition').text
-                    roles[role_name] = r
+                if child.name not in nodes:
+                    nodes[child.name] = child
+                else:
+                    nodes[child.name].order = arc['order']
 
-                role_name_xlink = [k for k, v in roles.items() if xbrl_config.JGAAP_role_ref[JGAAP_role][0] in v][0]
-                pre_def = xbrl_dir.pre.find('link:presentationLink', {'xlink:role': roles[role_name_xlink]})
-                nodes = {}
-                for i, arc in enumerate(pre_def.find_all('link:presentationArc')):
-                    if not arc['xlink:arcrole'].endswith('parent-child'):
-                        print('unexpected arctype')
-                        continue
+                if parent.name not in nodes:
+                    nodes[parent.name] = parent
 
-                    parent = Node(pre_def.find('link:loc', {'xlink:label': arc['xlink:from']}), i)
-                    child = Node(pre_def.find('link:loc', {'xlink:label': arc['xlink:to']}), arc['order'])
+                nodes[child.name].add_parent(nodes[parent.name])
 
-                    if child.name not in nodes:
-                        nodes[child.name] = child
+            parent_depth = -1
+            for name in nodes:
+                if parent_depth < nodes[name].depth:
+                    parent_depth = nodes[name].depth
+
+            data = []
+            for name in nodes:
+                n = nodes[name]
+                item = {}
+                parents = n.get_parents()
+                parents = parents + ([''] * (parent_depth - len(parents)))
+
+                item_order = digitize(n.order)
+                order_bottom = 'order'
+
+                at_bottom = False
+                for i, p in enumerate(parents):
+                    name = p if isinstance(p, str) else p.name
+                    if isinstance(p, str) and not at_bottom:
+                        order = digitize(n.order)
+                        item_order = np.nan
+                        order_bottom = f'parent_{i}_order'
+                        at_bottom = True
+                    elif isinstance(p, str) and at_bottom:
+                        order = np.nan
                     else:
-                        nodes[child.name].order = arc['order']
+                        order = digitize(p.order)
 
-                    if parent.name not in nodes:
-                        nodes[parent.name] = parent
+                    item[f'parent_{i}'] = name
+                    item[f'parent_{i}_order'] = digitize(order)
 
-                    nodes[child.name].add_parent(nodes[parent.name])
+                item['order'] = item_order
+                item['order_bottom'] = order_bottom
+                item['element'] = n.name
+                item['element_content'] = n.name.split('_')[-1]
+                item['depth'] = n.depth
 
-                parent_depth = -1
-                for name in nodes:
-                    if parent_depth < nodes[name].depth:
-                        parent_depth = nodes[name].depth
-
-                data = []
-                for name in nodes:
-                    n = nodes[name]
-                    item = {}
-                    parents = n.get_parents()
-                    parents = parents + ([''] * (parent_depth - len(parents)))
-
-                    item_order = digitize(n.order)
-                    order_bottom = 'order'
-
-                    at_bottom = False
-                    for i, p in enumerate(parents):
-                        name = p if isinstance(p, str) else p.name
-                        if isinstance(p, str) and not at_bottom:
-                            order = digitize(n.order)
-                            item_order = np.nan
-                            order_bottom = f'parent_{i}_order'
-                            at_bottom = True
-                        elif isinstance(p, str) and at_bottom:
-                            order = np.nan
-                        else:
-                            order = digitize(p.order)
-
-                        item[f'parent_{i}'] = name
-                        item[f'parent_{i}_order'] = digitize(order)
-
-                    item['order'] = item_order
-                    item['order_bottom'] = order_bottom
-                    item['element'] = n.name
-                    item['depth'] = n.depth
+                if initial_flag or item['element_content'] not in financial_statement.index.values:
                     item['label'] = taxonomy.read(n.location).label().text
-
                     _def = taxonomy.read(n.location).definition()
                     item['abstract'] = _def['abstract']
                     item['type'] = _def['type']
@@ -328,106 +315,123 @@ for JGAAP_role in xbrl_config.JGAAP_role_ref:
                         item['period_type'] = _def['xbrli:periodType']
                     if 'xbrli:balance' in _def.attrs:
                         item['balance'] = _def['xbrli:balance']
-
-                    data.append(item)
-
-                df = pd.DataFrame(data)
-
-
-                xbrl = xbrl_dir.xbrl
-                schema = xbrl.find('xbrli:xbrl')
-                namespaces = {}
-                for a in schema.element.attrs:
-                    if a.startswith('xmlns:'):
-                        namespaces[a.replace('xmlns:', '')] = schema.element.attrs[a]
-
-                xbrl_data = []
-                for i, row in df.iterrows():
-                    tag_name = row['element']
-
-                    for n in namespaces:
-                        if tag_name.startswith(n):
-                            tag_name = f"{n}:{tag_name.replace(n + '_', '')}"
-                            break
-
-                    tag = xbrl.find(tag_name, {'contextRef': xbrl_config.JGAAP_role_ref[JGAAP_role][1]})
-                    element = tag.element
-                    if element is None:
-                        continue
-
-                    item = {}
-                    for k in df.columns:
-                        item[k] = row[k]
-
-                    for i in range(parent_depth):
-                        parent_label = df[df["element"] == row[f"parent_{i}"]]["label"]
-                        item[f"parent_{i}_name"] = "" if len(parent_label) == 0 else parent_label.tolist()[0]
-
-                    label_reallocated = item['label']
-                    item.pop('label')
-                    item['label'] = label_reallocated
-
-                    context_id = element["contextRef"]
-                    if not context_id.endswith("NonConsolidatedMember"):
-                        context = xbrl.find("xbrli:context", {"id": context_id})
-                        if item["period_type"] == "duration":
-                            period = context.find("xbrli:endDate").text
-                        else:
-                            period = context.find("xbrli:instant").text
-
-                        period = period + '_amd' if doc_id.endswith('_amd') else period
-                        item["unit"] = element["unitRef"]
-                        item[period] = digitize(element.text)
-
-                        xbrl_data.append(item)
-
-                period_list += [period]
-                xbrl_data = pd.DataFrame(xbrl_data)
-                if initial_flag:
-                    financial_statement = xbrl_data.set_index('element')
-                    fs_parent_depth = parent_depth
-                    initial_flag = False
                 else:
-                    financial_statement[period] = ''
-                    for index, row in xbrl_data.iterrows():
-                        if row['element'] in financial_statement.index.values:
-                            financial_statement.at[row['element'], period] = row[period]
-                        else:
-                            parent_num = row['depth'] - 1
-                            extracted_df = financial_statement.copy()
-                            extracted_df = extracted_df[extracted_df[f'parent_{parent_num}'] == row[f'parent_{parent_num}']]
-                            order_bottom = row['order_bottom']
-                            current_max_order = digitize(extracted_df[order_bottom].max())
-                            extracted_row = extracted_df[extracted_df[order_bottom] == current_max_order]
-                            financial_statement.loc[(financial_statement[f'parent_{parent_num}'] == row[f'parent_{parent_num}']) & (financial_statement[order_bottom] == current_max_order), order_bottom] = current_max_order + 1
+                    item['label'] = financial_statement.at[item['element_content'], 'label']
+                    item['abstract'] = financial_statement.at[item['element_content'], 'abstract']
+                    item['type'] = financial_statement.at[item['element_content'], 'type']
+                    item['period_type'] = financial_statement.at[item['element_content'], 'period_type']
+                    item['balance'] = financial_statement.at[item['element_content'], 'balance']
 
-                            added_row = {}
-                            for i in range(fs_parent_depth):
-                                added_row[f'parent_{i}'] = np.nan if extracted_row[f'parent_{i}'].empty else extracted_row[f'parent_{i}'].values[0]
-                                added_row[f'parent_{i}_order'] = np.nan if extracted_row[f'parent_{i}_order'].empty else digitize(extracted_row[f'parent_{i}_order'].values[0])
-                                added_row[f'parent_{i}_name'] = row[f'parent_{i}_name']
-                            added_row[order_bottom] = current_max_order
-                            added_row['depth'] = row['depth']
+                data.append(item)
 
-                            for item in xbrl_config.miscellaneous_output_items:
-                                added_row[item] = row[item]
+            df = pd.DataFrame(data)
+            # -*- For debug -*-
+            #df.to_excel('df.xlsx', sheet_name=f'{role}')
 
-                            added_row['label'] = row['label']
-                            added_row['unit'] = row['unit']
-                            added_row[period] = row[period]
+            xbrl = xbrl_dir.xbrl
+            schema = xbrl.find('xbrli:xbrl')
+            namespaces = {}
+            for a in schema.element.attrs:
+                if a.startswith('xmlns:'):
+                    namespaces[a.replace('xmlns:', '')] = schema.element.attrs[a]
 
-                            added_data = pd.DataFrame([added_row]).set_index('element')
-                            financial_statement = financial_statement.append(added_data)
+            xbrl_data = []
+            for i, row in df.iterrows():
+                tag_name = row['element']
+
+                for n in namespaces:
+                    if tag_name.startswith(n):
+                        tag_name = f"{n}:{tag_name.replace(n + '_', '')}"
+                        break
+
+                tag = xbrl.find(tag_name, {'contextRef': xbrl_config.role_ref[role][role_key][1]})
+                element = tag.element
+                if element is None:
+                    continue
+
+                item = {}
+                for k in df.columns:
+                    item[k] = row[k]
+
+                for i in range(parent_depth):
+                    parent_label = df[df["element"] == row[f"parent_{i}"]]["label"]
+                    item[f"parent_{i}_name"] = "" if len(parent_label) == 0 else parent_label.tolist()[0]
+
+                label_reallocated = item['label']
+                item.pop('label')
+                item['label'] = label_reallocated
+
+                context_id = element["contextRef"]
+                if not context_id.endswith("NonConsolidatedMember"):
+                    context = xbrl.find("xbrli:context", {"id": context_id})
+                    if item["period_type"] == "duration":
+                        period = context.find("xbrli:endDate").text
+                    else:
+                        period = context.find("xbrli:instant").text
+
+                    period = period + '_amd' if doc_id.endswith('_amd') else period
+                    item["unit"] = element["unitRef"]
+                    item[period] = digitize(element.text)
+
+                    xbrl_data.append(item)
+
+            period_list += [period]
+            period_list_only_FY = period_list_only_FY + [period] if FY_or_Q == 'FY' else period_list_only_FY
+            xbrl_data = pd.DataFrame(xbrl_data)
+            if initial_flag:
+                financial_statement = xbrl_data.set_index('element_content')
+                fs_parent_depth = parent_depth
+                initial_flag = False
+            else:
+                financial_statement[period] = ''
+                for index, row in xbrl_data.iterrows():
+                    if row['element_content'] in financial_statement.index.values:
+                        financial_statement.at[row['element_content'], period] = row[period]
+                    else:
+                        parent_num = row['depth'] - 1
+                        extracted_df = financial_statement.copy()
+                        extracted_df = extracted_df[extracted_df[f'parent_{parent_num}'] == row[f'parent_{parent_num}']]
+                        order_bottom = row['order_bottom']
+                        current_max_order = digitize(extracted_df[order_bottom].max())
+                        extracted_row = extracted_df[extracted_df[order_bottom] == current_max_order]
+                        financial_statement.loc[(financial_statement[f'parent_{parent_num}'] == row[f'parent_{parent_num}']) & (financial_statement[order_bottom] == current_max_order), order_bottom] = current_max_order + 1
+
+                        added_row = {}
+                        for i in range(fs_parent_depth):
+                            added_row[f'parent_{i}'] = np.nan if extracted_row[f'parent_{i}'].empty else extracted_row[f'parent_{i}'].values[0]
+                            added_row[f'parent_{i}_order'] = np.nan if extracted_row[f'parent_{i}_order'].empty else digitize(extracted_row[f'parent_{i}_order'].values[0])
+                            added_row[f'parent_{i}_name'] = row[f'parent_{i}_name']
+                        added_row[order_bottom] = current_max_order
+                        added_row['order_bottom'] = order_bottom
+                        added_row['depth'] = row['depth']
+
+                        for item in xbrl_config.miscellaneous_output_items:
+                            added_row[item] = row[item]
+
+                        added_row['label'] = row['label']
+                        added_row['unit'] = row['unit']
+                        added_row[period] = row[period]
+
+                        added_data = pd.DataFrame([added_row]).set_index('element_content')
+                        financial_statement = financial_statement.append(added_data)
 
         period_list.sort()
+        period_list_only_FY.sort()
         parent_list = [f'parent_{i}' for i in range(fs_parent_depth)]
         parent_order_list = [f'parent_{i}_order' for i in range(fs_parent_depth)]
         parent_name_list = [f'parent_{i}_name' for i in range(fs_parent_depth)]
-        output_order = parent_name_list + ['label', 'unit'] + period_list
+#        output_order = parent_name_list + ['label', 'unit'] + period_list
+#        output_order_only_FY = parent_name_list + ['label', 'unit'] + period_list_only_FY
 
         # -*- For debug -*-
-#        output_order = parent_list + parent_order_list + ['order', 'order_bottom', 'depth'] + xbrl_config.miscellaneous_output_items + parent_name_list + ['label', 'unit'] + period_list
+        output_order = parent_list + parent_order_list + ['order', 'order_bottom', 'depth'] + xbrl_config.miscellaneous_output_items + parent_name_list + ['label', 'unit'] + period_list
+        output_order_only_FY = parent_list + parent_order_list + ['order', 'order_bottom', 'depth'] + xbrl_config.miscellaneous_output_items + parent_name_list + ['label', 'unit'] + period_list_only_FY
 
         financial_statement.sort_values(by=[c for c in df.columns if c.endswith('order')], inplace=True)
-        financial_statement = financial_statement.reset_index()[output_order]
-        financial_statement.to_excel(f'{excel_dir}/{company}_{JGAAP_role}.xlsx', sheet_name=f'{JGAAP_role}')
+
+        financial_statement_all = financial_statement.reset_index()[output_order]
+        financial_statement_all.to_excel(f'{excel_dir}/{company}_{role}_all.xlsx', sheet_name=f'{role}')
+        financial_statement_FY = financial_statement.reset_index()[output_order_only_FY]
+        financial_statement_FY.to_excel(f'{excel_dir}/{company}_{role}_FY.xlsx', sheet_name=f'{role}')
+
+        print('')

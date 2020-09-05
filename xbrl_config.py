@@ -15,11 +15,48 @@ taxonomy_link_list = {
 
 
 # -*- XBRL related -*-
-JGAAP_role_ref = {
-        'BS': ['rol_ConsolidatedBalanceSheet', 'CurrentYearInstant'],
-        'PL': ['rol_ConsolidatedStatementOfIncome', 'CurrentYearDuration'],
-        'CF': ['rol_ConsolidatedStatementOfCashFlows', 'CurrentYearDuration']
+role_ref = {
+        'BS': {
+            'Japan GAAP_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet', 'CurrentYearInstant'],
+            'Japan GAAP_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet', 'CurrentQuarterInstant'],
+            'IFRS_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet', 'CurrentYearInstant'],
+            'IFRS_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet', 'CurrentQuarterInstant'],
+            'US GAAP_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet', 'CurrentYearInstant'],
+            'US GAAP_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet', 'CurrentQuarterInstant']
+            },
+        'PL': {
+            'Japan GAAP_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome', 'CurrentYearDuration'],
+            'Japan GAAP_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome', 'CurrentYTDDuration'],
+            'IFRS_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome', 'CurrentYearDuration'],
+            'IFRS_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome', 'CurrentYTDDuration'],
+            'US GAAP_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome', 'CurrentYearDuration'],
+            'US GAAP_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome', 'CurrentYTDDuration']
+            },
+        'CF': {
+            'Japan GAAP_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfCashFlows-indirect', ['CurrentYearDuration','CurrentYearInstant']],
+            'Japan GAAP_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedStatementOfCashFlows-indirect', ['CurrentYTDDuration', 'CurrentQuarterInstant']],
+            'IFRS_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfCashFlows-indirect', ['CurrentYearDuration','CurrentYearInstant']],
+            'IFRS_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfCashFlows-indirect', ['CurrentYTDDuration', 'CurrentQuarterInstant']],
+            'US GAAP_FY': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfCashFlows-indirect', ['CurrentYearDuration','CurrentYearInstant']],
+            'US GAAP_Q': ['http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfCashFlows-indirect', ['CurrentYTDDuration', 'CurrentQuarterInstant']]
+            },
         }
+
+profile_items = {
+        'FY':{
+            'filing_date': 'jpcrp_cor:FilingDateCoverPage',
+            'company_name': 'jpcrp_cor:CompanyNameCoverPage',
+            'document_title': 'jpcrp_cor:DocumentTitleCoverPage',
+            'fiscal_year': 'jpcrp_cor:FiscalYearCoverPage'
+            },
+        'Q':{
+            'filing_date': 'jpcrp_cor:FilingDateCoverPage',
+            'company_name': 'jpcrp_cor:CompanyNameCoverPage',
+            'document_title': 'jpcrp_cor:DocumentTitleCoverPage',
+            'quarterly': 'jpcrp_cor:QuarterlyAccountingPeriodCoverPage'
+            }
+        }
+
 
 # -*- I/O related -*-
 miscellaneous_output_items = [
@@ -27,7 +64,8 @@ miscellaneous_output_items = [
         'type',
         'period_type',
         'balance',
-        'element'
+        'element',
+        'element_content'
         ]
 
 listed_ticker_list = [
